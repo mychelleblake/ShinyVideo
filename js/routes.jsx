@@ -21,7 +21,7 @@ var Router = Backbone.Router.extend({
 		"": ":index"
 	},
 	index: function() {
-		ReactDOM.render(<homeView router={this} />, document.getElementById("container"));
+		ReactDOM.render(<homeView />, document.getElementById("container"));
 	}
 });
 
