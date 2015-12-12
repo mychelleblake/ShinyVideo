@@ -3,7 +3,7 @@ require("../css/normalize.css");
 require("../css/video.css");
 var React = require("react");
 var ReactDOM = require("react-dom");
-var Router = require ("routes.jsx");
+var router = require("../js/routes.jsx");
 
 
 

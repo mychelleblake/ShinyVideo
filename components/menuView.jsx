@@ -2,7 +2,8 @@ require('../css/main.css');
 require('../css/normalize.css');
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Router = require ("routes.jsx");
+var router = require("../js/routes.jsx");
+
 
 
 var VideoLink = Backbone.Model.extend ({
