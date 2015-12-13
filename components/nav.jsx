@@ -8,6 +8,7 @@ var Nav = React.createClass({
 	render: function () {
 		return (
 			<div>
+			<div id="navMenu">
 				<h1>ShinyVideo</h1>
 					<ul>
 						<li><button id="homeLI">Home</button></li>
@@ -16,11 +17,12 @@ var Nav = React.createClass({
 						<li><button id="documentationLI">Documentation</button></li>
 					</ul>
 			</div>
-		)
-	},
+			</div>
+		);
+	}
 });
 
 
-ReactDOM.render(<nav />, document.getElementById("navMenu"));
+ReactDOM.render(nav, document.getElementById("headerNav"));
 
 module.exports = Nav;

@@ -6,22 +6,26 @@
 	<link rel="stylesheet" type="text/css" href="./css/main.css"> 
 	<link rel="stylesheet" type="text/css" href="./css/video.css">
 	<link rel="stylesheet" type="text/css" href="./css/normalize.css">  
-	
+	<script src="http://popcornjs.org/code/dist/popcorn-complete.min.js"></script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+ 			var pop = Popcorn("#video");
+				pop.controls(false);
+				pop.loop(true);
+ 				pop.autoplay(true);
+			}, false);
+	</script>
 </head>
 <body>
 	
-	<header>
-		<div id = "navMenu">	
-		</div>
+	<header id="headerNav">
+
 	</header>
 
 	<div id="container">
 	</div>
 
-	<script src="http://popcornjs.org/code/dist/popcorn-complete.min.js"></script>
-	<script src="js/bundle.js"></script>
-	<script src="https://www.parsecdn.com/js/parse-latest.jsx"></script>
-	<script src="https://www.parsecdn.com/js/parse-react.jsx"></script>
-	<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+
+	<script type="text/javascript" src="js/bundle.js"></script>
 </body>
 </html>

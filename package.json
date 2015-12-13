@@ -27,6 +27,14 @@
     "webpack-dev-server": "^1.14.0"
   },
   "dependencies": {
-    "popcorn": "0.0.3"
+    "backbone": "^1.2.3",
+    "css-loader": "^0.23.0",
+    "jquery": "^2.1.4",
+    "json-loader": "^0.5.4",
+    "jsx-loader": "^0.13.2",
+    "popcorn": "0.0.3",
+    "react-dom": "^0.14.3",
+    "style-loader": "^0.13.0",
+    "underscore": "^1.8.3"
   }
 }

@@ -8,12 +8,6 @@ var router = require("../js/routes.jsx");
 
 var HomeView = React.createClass({
 	render: function () {
-		document.addEventListener("DOMContentLoaded", function () {
- 			var pop = Popcorn("#video");
-				pop.controls(false);
-				pop.loop(true);
- 				pop.autoplay(true);
-			}, false);
 		return (
 			<div>
 				<div id="headerVideo">
@@ -26,5 +20,7 @@ var HomeView = React.createClass({
 	}
 	
 });
+
+// ReactDOM.render(<homeView />, document.getElementById("container"));
 
 module.exports = HomeView;

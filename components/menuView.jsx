@@ -52,9 +52,11 @@ var MenuView = React.createClass({
 	render: function () {
 		var myData = this.props.data.map(function(obj){
 		return (
+			<div>
 			<div id="menuViewDiv">
 				<div id="thumbs"><a href="{obj.videolink}"><img src="{obj.imageURL}"/></a></div>
 				<div id="description">{obj.description}</div>
+			</div>
 			</div>
 		)
 	});
