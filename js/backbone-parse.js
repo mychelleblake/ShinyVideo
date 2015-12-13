@@ -91,8 +91,8 @@ Backbone.sync = function (method, model, options) {
     url: url,
     type: type,
     headers: {
-      "X-Parse-Application-Id": applicationId,
-      "X-Parse-REST-API-Key": restApiKey
+      "X-Parse-Application-Id": "pBmCIWzzZH7JUXtA5noGeVjfFfnUc8jMQ2RG2wPs",
+      "X-Parse-REST-API-Key": "2cQkxHZs8C5TbSOokQ0JXBQD8ZPPtxL5JNOzDium"
     }
   };
 
@@ -100,5 +100,3 @@ Backbone.sync = function (method, model, options) {
 };
 
 module.exports = Backbone;
-Status API Training Shop Blog About Pricing
-© 2015 GitHub, Inc. Terms Privacy Security Contact Help

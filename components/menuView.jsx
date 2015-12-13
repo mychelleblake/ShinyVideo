@@ -30,18 +30,8 @@ var VideosCollection = new Videos ();
 	VideosCollection.fetch({
 		success: function(resp) {
 			var dataObj = {"data": resp.toJSON()};
-			var mappedData = this.results.map(function(obj) {
-				return {
-					"objectId": obj.objectId,
-					"videolink": obj.videolink,
-					"imageURL": obj.imageURL,
-					"description": obj.description,
-					"comments": obj.comments
-				}			
-			})
 			console.log("success: ", resp);	
-			console.log(mappedData);
-			ReactDOM.render(<menuView data={mappedData} />, document.getElementById("container"));		
+			// ReactDOM.render(<MenuView />, document.getElementById("container"));		
 		}, error: function(err) {
 			console.log("error: ", err);
 		}
@@ -50,16 +40,14 @@ var VideosCollection = new Videos ();
 
 var MenuView = React.createClass({
 	render: function () {
-		var myData = this.props.data.map(function(obj){
 		return (
 			<div>
 			<div id="menuViewDiv">
-				<div id="thumbs"><a href="{obj.videolink}"><img src="{obj.imageURL}"/></a></div>
-				<div id="description">{obj.description}</div>
+				<div id="thumbs"></div>
+				<div id="description"></div>
 			</div>
 			</div>
 		)
-	});
 	}
 });
 

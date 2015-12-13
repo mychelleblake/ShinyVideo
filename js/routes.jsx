@@ -5,11 +5,11 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var backbone = require('backbone');
 
-var homeView = require ("../components/homeView.jsx");
-var documentation = require ("../components/documentation.jsx");
-var menuView = require ("../components/menuView.jsx");
-var videoPlayer = require ("../components/videoPlayer.jsx");
-var nav = require("../components/nav.jsx");
+var HomeView = require ("../components/homeView.jsx");
+var Documentation = require ("../components/documentation.jsx");
+var MenuView = require ("../components/menuView.jsx");
+var VideoPlayer = require ("../components/videoPlayer.jsx");
+var Nav = require("../components/nav.jsx");
 
 var Router = Backbone.Router.extend({
 	initialize: function() {
@@ -22,8 +22,8 @@ var Router = Backbone.Router.extend({
 		"": ":index"
 	},
 });
-
-ReactDOM.render(<homeView />, document.getElementById("container"));
+console.log("stuff");
+ReactDOM.render(<HomeView />, document.getElementById("container"));
 
 var router = new Router ();
 

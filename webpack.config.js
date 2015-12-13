@@ -8,6 +8,7 @@ module.exports = {
     path: __dirname,
     filename: "js/bundle.js"
   },
+  devtool: "eval-source-map",
   plugins: [
     new webpack.ProvidePlugin({
       "_": "underscore",

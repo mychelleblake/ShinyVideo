@@ -23,6 +23,6 @@ var Nav = React.createClass({
 });
 
 
-ReactDOM.render(nav, document.getElementById("headerNav"));
+ReactDOM.render(<Nav />, document.getElementById("headerNav"));
 
 module.exports = Nav;
