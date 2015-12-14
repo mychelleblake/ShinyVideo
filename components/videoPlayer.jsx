@@ -6,10 +6,6 @@ var ReactDOM = require("react-dom");
 var router = require("../js/routes.jsx");
 
 
-
-//Adds Video Player
-
-
 var VideoLink = Backbone.Model.extend ({
 	initialize: function () {		
 	},
@@ -83,8 +79,6 @@ var VideoPlayer = React.createClass({
 	},
 
 
-
-
 	render: function () {
 		if (this.state.keyVideos.length==0)
 		{
@@ -96,19 +90,31 @@ var VideoPlayer = React.createClass({
 				return video.objectId==self.props.params.objectId
 			})
 			return (
+			<div>
 			<div id="videoPlayer">
-			 	
     			<div id="playerVideo">
     				<PopcornPlayer src={playingVideo.videolink} />
 				</div>
 			</div>
+			<div id="addCommentsDiv">
+				<form id="addCommentsForm">
+					<input type="hidden" id="objectID"/>
+					<input type="textarea" className="addComments" placeholder="Add comments here" id="addCommentBox" />
+				</form>
+			</div>
+			<div id="scrollingCommentsDiv">
+				<ul>
+					<li>data here</li>
+				</ul>
+			</div>
+			<div id="graphDiv">
+				// var plot = $("#graphDiv").plot(data, options).data("plot"); //https://github.com/flot/flot/blob/master/API.md
+			</div>
+			</div>
 		)
 		}
-
 	}
 });
-
-
 
 
 

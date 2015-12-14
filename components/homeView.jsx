@@ -27,6 +27,5 @@ var HomeView = React.createClass({
 	
 });
 
-// ReactDOM.render(<homeView />, document.getElementById("container"));
 
 module.exports = HomeView;
