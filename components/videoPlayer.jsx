@@ -39,6 +39,7 @@ var PopcornPlayer = React.createClass({
 		pop.controls(true);
 		pop.loop(false);
 		pop.autoplay(false);
+
 	},
 
 	render: function() {
@@ -107,48 +108,6 @@ var VideoPlayer = React.createClass({
 	}
 });
 
-
-//Adds Comments Box
-
-var AddComments = React.createClass({
-	render: function () {
-		return (
-			<div id="addCommentsDiv">
-				<form id="addCommentsForm">
-					<input type="hidden" id="objectID" value={this.props.data.objectId}/>
-					<input type="textarea" className="addComments" placeholder="Add comments here" id="addCommentBox" defaultValue={this.props.data.comments}/>
-				</form>
-			</div>
-		)
-	}
-});
-
-//Scrolling Comments Box
-
-var ScrollingComments = React.createClass({
-	render: function () {
-		return (
-			<div id="scrollingCommentsDiv">
-				<ul>
-					<li>data here</li>
-				</ul>
-			</div>
-		)
-	}
-});
-
-
-//Graph Box
-
-var GraphBox = React.createClass ({
-	render: function () {
-		return (
-			<div id="graphDiv">
-				// var plot = $("#graphDiv").plot(data, options).data("plot"); //https://github.com/flot/flot/blob/master/API.md
-			</div>
-		)
-	}
-});
 
 
 

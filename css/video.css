@@ -6,6 +6,12 @@
 
 #blankVideo {}
 
+/* SCROLLING COMMENTS STYLING */
+
+#scrollingCommentsDiv {width: 400px; float: left; display: inline-block; background-color: yellow;}
+
+
+
 
 
 /* GRAPH STYLING */
