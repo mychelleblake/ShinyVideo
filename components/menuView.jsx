@@ -27,28 +27,41 @@ var Videos = Backbone.Collection.extend ({
 
 var VideosCollection = new Videos ();
 
-	VideosCollection.fetch({
-		success: function(resp) {
-			var dataObj = {"data": resp.toJSON()};
+VideosCollection.fetch({
+	success: function(resp) {
+		var dataObj = resp.toJSON();
 			console.log("success: ", resp);	
-			// ReactDOM.render(<MenuView />, document.getElementById("container"));		
-		}, error: function(err) {
-			console.log("error: ", err);
-		}
+		var	mapData = dataObj.results.map(function(obj){
+			return {
+				"objectId": obj.objectId,
+				"videolink": obj.videolink,
+				"imageURL": obj.imageURL,
+				"description": obj.description,
+				"comments": obj.comments
+			}
+		})
+	}, error: function(err) {
+				console.log("error: ", err);
+	}
 });
 
 
 var MenuView = React.createClass({
 	render: function () {
-		return (
-			<div>
-			<div id="menuViewDiv">
-				<div id="thumbs"></div>
-				<div id="description"></div>
-			</div>
-			</div>
-		)
+		var theData = this.props.data.map(function(obj) {
+			return (
+				<div>
+					<div id="menuViewDiv">
+						<div id="thumbs"><a href="{obj.videolink}"><img src="{imageURL}"/></a></div>
+						<div id="description"><p>{obj.description}</p></div>
+					</div>
+				</div>
+			)
+		})
+		return(<div id="menuViewContainer">{theData}</div>)
 	}
 });
+
+ReactDOM.render(<MenuView data={theData}/>, document.getElementById("menuViewContainer"));
 
 module.exports = MenuView;
