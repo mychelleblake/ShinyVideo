@@ -2,23 +2,34 @@
 serenity blue 92A8D1, 89ABE3
 */
 
-/* 1. CSS FOR MAIN SITE AND HOME PAGE VIEW */
+/* 1. MAIN SITE AND HOME PAGE VIEW */
 
-body {background-color: white; color: #0453ac; width: 1280; margin: 0 auto;}
+body {background-color: white; color: #92A8D1; width: 1280; margin: 0 auto;}
 
 #container {display: block;}
 
-#headerVideo {width: 1280px; height: 500px; display: block;}
-
-#videoTitle h1 {color: white; z-index: -100; font-size: 50px; text-align: center; position: absolute; margin-top: 200px;}
+#headerVideo {width: 1280px; height: 720px; display: block; clear:both;}
 
 
-/* 2. CSS FOR NAV MENU */
+
+
+/* 2. NAV MENU */
 
 #navMenu {width: 1280px; height: 20px;}
 
-#headerNav h1 {margin: 0; padding: 0; margin-left: 10px; display: inline-block; width: 100px; float: left;}
+#headerNav h1 {margin: 0; padding: 0; margin-left: 5px; display: inline-block; width: 100px; float: left;}
 
 #navMenu ul {list-style-type: none; float: right; margin-right: 10px;}
 
 #navMenu li {list-style-type: none; float: left; margin-right: 20px; text-align: center;}
+
+#navMenu button {background-color: #F7CAC9; font-weight: bold;}
+
+
+/* 3. MENU VIEW PAGE */
+
+#menuViewDiv {width: 1280px; height: 900px; display: block; background-color: #92A8D1;}
+
+#thumbs ul {width: 700px; float:right; list-style-type: none; }
+
+#thumbs li {list-style-type: none; float: left; margin-right: 10px;}

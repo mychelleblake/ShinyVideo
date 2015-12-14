@@ -13,7 +13,7 @@ var VideoLink = Backbone.Model.extend ({
 		objectId: null,
 		videolink: null,
 		imageURL: null,
-		description: null,
+		videoInfo: null,
 		comments: null
 	},
 	_parse_class_name: "videolink",
@@ -52,8 +52,10 @@ var MenuView = React.createClass({
 			return (
 				<div>
 					<div id="menuViewDiv">
-						<div id="thumbs"><a href="{this.props.videolink}"><img src="{this.props.imageURL}"/></a></div>
-						<div id="videoInfoArea"><p>{this.props.videoInfo}</p></div>
+						<ul id="thumbView">
+							<li><a href="{this.props.videolink}"><img src="{this.props.imageURL}"/></a></li>
+							<li>{this.props.videoInfo}</li>
+						</ul>
 					</div>
 				</div>
 			)
