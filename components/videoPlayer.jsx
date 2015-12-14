@@ -1,6 +1,3 @@
-require("../css/main.css");
-require("../css/normalize.css");
-require("../css/video.css");
 var React = require("react");
 var ReactDOM = require("react-dom");
 var router = require("../js/routes.jsx");
@@ -90,28 +87,28 @@ var VideoPlayer = React.createClass({
 			})
 			return (
 				<div>
-				<div id="videoPlayer">
-				<div id="playerVideo">
-				<PopcornPlayer src={playingVideo.videolink} />
-				</div>
-				</div>
+					<div id="videoPlayer">
+						<div id="playerVideo">
+							<PopcornPlayer src={playingVideo.videolink} />
+						</div>
+					</div>
 
-				<div id="scrollingCommentsDiv">
-				<ul>
-				<li>scrolling data goes here</li>
-				</ul>
-				</div>
+					<div id="scrollingCommentsDiv">
+						<ul>
+							<li>scrolling data goes here</li>
+						</ul>
+					</div>
 
-				<div id="addCommentsDiv">
-				<form id="addCommentsForm">
-				<input type="hidden" id="objectID"/>
-				<input type="textarea" className="addComments" placeholder="Add comments here" id="addCommentBox" />
-				</form>
-				</div>
+					<div id="addCommentsDiv">
+					<form id="addCommentsForm">
+					<input type="hidden" id="objectID"/>
+					<input type="textarea" className="addComments" placeholder="Add comments here" id="addCommentBox" />
+					</form>
+					</div>
 
-				<div id="graphDiv">
-				// var plot = $("#graphDiv").plot(data, options).data("plot"); //https://github.com/flot/flot/blob/master/API.md
-				</div>
+					<div id="graphDiv">
+					// var plot = $("#graphDiv").plot(data, options).data("plot"); //https://github.com/flot/flot/blob/master/API.md
+					</div>
 
 				</div>
 			)
@@ -121,6 +118,13 @@ var VideoPlayer = React.createClass({
 
 module.exports = VideoPlayer;
 
+
+
+
+// componentWillReceiveProps: function (newProps) {
+// 	this.props
+// 	newProps
+// }
 
 // var $pop = Popcorn("#video");
 // $pop.listen( "timeupdate", function() {

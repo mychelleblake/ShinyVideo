@@ -19,26 +19,29 @@ body {background-color: white; color: #92A8D1; width: 1280; margin: 0 auto;}
 
 #headerNav h1 {margin: 0; padding: 0; padding-top: 0; margin-left: 5px; display: inline-block; width: 100px; float: left;}
 
-#navMenu ul {list-style-type: none; float: right; margin-right: 10px; padding-top: 0;}
+#navMenu ul {list-style-type: none; float: right; margin-right: 100px; padding-top: 0;}
 
 #navMenu li {list-style-type: none; float: left; margin-right: 20px; text-align: center; padding-top: 0;}
 
-/*#navMenu button {background-color: #F7CAC9; font-weight: bold;}*/
 
 
 
 /* 3. MENU VIEW PAGE */
 
-#menuViewDiv {width: 1280px; height: 900px; display: block; color: black;}
+#menuViewDiv {width: 1280px; height: 900px; display: block; color: black; list-style-type: none; margin-top: 50px;}
 
 #thumbs ul {width: 700px; float:right; list-style-type: none; }
 
-#thumbs li {list-style-type: none; float: left; margin-right: 10px;}
+#thumbs li {list-style-type: none; float: left; margin-right: 10px; padding: 0;}
 
-#thumbOne {width: 500px; height: 300px; float: left;}
+#thumbOne {width: 450px; height: 250px; float: left; list-style-type: none;}
 
-#thumbTwo {width: 580px; height: 300px; float: left;}
+#thumbTwo {width: 580px; height: 250px; float: left; list-style-type: none;}
+
+#thumbView {list-style-type: none;}
+
+
 
 /* 4. DOCUMENTATION PAGE */
 
-#documentationDiv {width: 1280px; height: 900px; display: block; background-color: yellow;}
+#documentationDiv {width: 1000px; height: 900px; display: block; margin-left: 10px; margin-top:30px; color: black;}
