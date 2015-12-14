@@ -6,15 +6,19 @@
 
 #blankVideo {}
 
+
 /* SCROLLING COMMENTS STYLING */
 
-#scrollingCommentsDiv {width: 370px; height: 450px; margin-top: 50px; margin-left: 10px; float: left; display: inline-block; background-color: yellow;}
+#scrollingCommentsDiv {width: 400px; height: 450px; margin-top: 50px; margin-left: 10px; float: left; display: inline-block; background-color: yellow;}
 
 #scrollingCommentsDiv li {list-style-type: none;}
 
 
+/* ADD COMMENT STYLING */
 
+#addCommentsDiv input {width: 1000px; height: 50px; margin: 0; margin-left: 10px; margin-top:10px; padding: 0; display: block; background-color: red;}
 
 /* GRAPH STYLING */
 
 #graphDiv {width: 400px; height: 300px;}
+
