@@ -10,7 +10,6 @@ var parseCred = require('./backbone-parse');
 // var menuView = require ("../components/menuView.jsx");
 // var videoPlayer = require ("../components/videoPlayer.jsx");
 // var nav = require("../components/nav.jsx");
-console.log("dog???!!!");
 var Router = require("./routes.jsx");
 
 

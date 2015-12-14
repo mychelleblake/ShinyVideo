@@ -31,14 +31,15 @@ VideosCollection.fetch({
 	success: function(resp) {
 		var dataObj = resp.toJSON();
 			console.log("success: ", resp);	
-		var	mapData = dataObj.results.map(function(obj){
+		var	mapData = dataObj.map(function(obj){
 			return {
-				"objectId": obj.objectId,
-				"videolink": obj.videolink,
-				"imageURL": obj.imageURL,
-				"description": obj.description,
-				"comments": obj.comments
+				objectId: obj.objectId,
+				videolink: obj.videolink,
+				imageURL: obj.imageURL,
+				videoInfo: obj.videoInfo,
+				comments: obj.comments
 			}
+			console.log("here it is ", mapData);
 		})
 	}, error: function(err) {
 				console.log("error: ", err);
@@ -48,20 +49,17 @@ VideosCollection.fetch({
 
 var MenuView = React.createClass({
 	render: function () {
-		var theData = this.props.data.map(function(obj) {
 			return (
 				<div>
 					<div id="menuViewDiv">
-						<div id="thumbs"><a href="{obj.videolink}"><img src="{imageURL}"/></a></div>
-						<div id="description"><p>{obj.description}</p></div>
+						<div id="thumbs"><a href="{this.props.videolink}"><img src="{this.props.imageURL}"/></a></div>
+						<div id="videoInfoArea"><p>{this.props.videoInfo}</p></div>
 					</div>
 				</div>
 			)
-		})
-		return(<div id="menuViewContainer">{theData}</div>)
 	}
 });
 
-ReactDOM.render(<MenuView data={theData}/>, document.getElementById("menuViewContainer"));
+ReactDOM.render(<MenuView />, document.getElementById("menuViewContainer"));
 
 module.exports = MenuView;
