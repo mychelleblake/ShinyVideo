@@ -7,6 +7,12 @@ var router = require("../js/routes.jsx");
 
 
 var HomeView = React.createClass({
+	componentDidMount: function() {
+ 		var pop = Popcorn("#video");
+		pop.controls(false);
+		pop.loop(true);
+ 		pop.autoplay(true);
+	},
 	render: function () {
 		return (
 			<div>

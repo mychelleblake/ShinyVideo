@@ -28,8 +28,12 @@ body {background-color: white; color: #92A8D1; width: 1280; margin: 0 auto;}
 
 /* 3. MENU VIEW PAGE */
 
-#menuViewDiv {width: 1280px; height: 900px; display: block; background-color: #92A8D1;}
+#menuViewDiv {width: 1280px; height: 900px; display: block; background-color: #92A8D1; color: black;}
 
 #thumbs ul {width: 700px; float:right; list-style-type: none; }
 
 #thumbs li {list-style-type: none; float: left; margin-right: 10px;}
+
+/* 4. DOCUMENTATION PAGE */
+
+#documentationDiv {width: 1280px; height: 900px; display: block; background-color: yellow;}

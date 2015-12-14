@@ -7,7 +7,7 @@ var Documentation = React.createClass({
 	render: function () {
 		return (
 			<div id="documentationDiv">
-				<div id="descriptionHeader">
+				<div id="descriptionHeader" className="docuInfo">
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore cupiditate aperiam natus iure exercitationem odio sunt ut recusandae minus. Aliquid impedit soluta laudantium asperiores itaque. Corporis facilis nemo repellat quasi expedita, aliquam voluptatum esse, fuga ullam minima laboriosam cumque suscipit ipsa cum accusamus temporibus iusto quidem, perferendis doloribus sed quaerat quod.</p>
 				</div>
 
@@ -29,5 +29,6 @@ var Documentation = React.createClass({
 		)
 	}
 });
+
 
 module.exports = Documentation;

@@ -2,8 +2,9 @@ require('../css/main.css');
 require('../css/normalize.css');
 var React = require('react');
 var ReactDOM = require('react-dom');
-var router = require("../js/routes.jsx");
+var ReactRouter = require("react-router");
 
+var Link = ReactRouter.Link;
 
 
 var VideoLink = Backbone.Model.extend ({
@@ -27,41 +28,60 @@ var Videos = Backbone.Collection.extend ({
 
 var VideosCollection = new Videos ();
 
-VideosCollection.fetch({
-	success: function(resp) {
-		var dataObj = resp.toJSON();
-			console.log("success: ", resp);	
-		var	mapData = dataObj.map(function(obj){
-			return {
-				objectId: obj.objectId,
-				videolink: obj.videolink,
-				imageURL: obj.imageURL,
-				videoInfo: obj.videoInfo,
-				comments: obj.comments
-			}
-			console.log("here it is ", mapData);
-		})
-	}, error: function(err) {
-				console.log("error: ", err);
-	}
-});
+
 
 
 var MenuView = React.createClass({
+	getInitialState: function() {
+		return {
+			keyVideos: [],
+		}
+	},
+	componentDidMount: function() {
+		var self = this;
+		VideosCollection.fetch({
+			success: function(resp) {
+				var dataObj = resp.toJSON();
+					console.log("success: ", resp);	
+				var	mapData = dataObj.map(function(obj){
+					return {
+						objectId: obj.objectId,
+						videolink: obj.videolink,
+						imageURL: obj.imageURL,
+						videoInfo: obj.videoInfo,
+						comments: obj.comments
+					}
+					console.log("here it is ", mapData);
+				})
+				self.setState ({keyVideos: mapData})
+			}, error: function(err) {
+						console.log("error: ", err);
+			}
+		});
+	},
 	render: function () {
 			return (
 				<div>
 					<div id="menuViewDiv">
 						<ul id="thumbView">
-							<li><a href="{this.props.videolink}"><img src="{this.props.imageURL}"/></a></li>
+						{
+							this.state.keyVideos.map(this.renderThumb)
+						}
+							<li><a href={this.props.videolink}><img src={this.props.imageURL}/></a></li>
 							<li>{this.props.videoInfo}</li>
 						</ul>
 					</div>
 				</div>
 			)
+	},
+	renderThumb: function (menuData) {
+		return (
+		<li><div><Link to={"/VideoPlayer/" + menuData.objectId}><img src={menuData.imageURL}/></Link></div>
+		<div>{menuData.videoInfo}</div></li>)
+
 	}
 });
 
-ReactDOM.render(<MenuView />, document.getElementById("menuViewContainer"));
+
 
 module.exports = MenuView;
