@@ -9,7 +9,6 @@ var HomeView = require ("../components/homeView.jsx");
 var Documentation = require ("../components/documentation.jsx");
 var MenuView = require ("../components/menuView.jsx");
 var VideoPlayer = require ("../components/videoPlayer.jsx");
-var AddComments = require ("../components/addComments.jsx");
 var Nav = require("../components/nav.jsx");
 
 var Layout = React.createClass ({
@@ -31,7 +30,6 @@ var routes = (
 		<Route component={HomeView} path="/"></Route>
 		<Route component={MenuView} path="/MenuView"></Route>
 		<Route component={VideoPlayer} path="/VideoPlayer/:objectId"></Route>
-		<Route component={AddComments} path="/VideoPlayer"></Route>	
 		<Route component={Documentation} path="/Library"></Route>
 	</Route>
 	</Router>

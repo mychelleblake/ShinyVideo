@@ -41,11 +41,11 @@ var PopcornPlayer = React.createClass({
 	render: function() {
 		return (
 			<div>
-				<video id="theVideoPlayer">
-				<source src={this.props.src}></source>
-				</video>
+			<video id="theVideoPlayer">
+			<source src={this.props.src}></source>
+			</video>
 			</div>
-		);
+			);
 	}
 })
 
@@ -60,7 +60,7 @@ var VideoPlayer = React.createClass({
 		VideosCollection.fetch({
 			success: function(resp) {
 				var dataObj = resp.toJSON();
-					console.log("success: ", resp);	
+				console.log("success: ", resp);	
 				var	mapData = dataObj.map(function(obj){
 					return {
 						objectId: obj.objectId,
@@ -73,11 +73,10 @@ var VideoPlayer = React.createClass({
 				})
 				self.setState ({keyVideos: mapData})
 			}, error: function(err) {
-						console.log("error: ", err);
+				console.log("error: ", err);
 			}
 		});
 	},
-
 
 	render: function () {
 		if (this.state.keyVideos.length==0)
@@ -90,34 +89,43 @@ var VideoPlayer = React.createClass({
 				return video.objectId==self.props.params.objectId
 			})
 			return (
-			<div>
-			<div id="videoPlayer">
-    			<div id="playerVideo">
-    				<PopcornPlayer src={playingVideo.videolink} />
+				<div>
+				<div id="videoPlayer">
+				<div id="playerVideo">
+				<PopcornPlayer src={playingVideo.videolink} />
 				</div>
-			</div>
-			<div id="addCommentsDiv">
-				<form id="addCommentsForm">
-					<input type="hidden" id="objectID"/>
-					<input type="textarea" className="addComments" placeholder="Add comments here" id="addCommentBox" />
-				</form>
-			</div>
-			<div id="scrollingCommentsDiv">
+				</div>
+
+				<div id="scrollingCommentsDiv">
 				<ul>
-					<li>data here</li>
+				<li>scrolling data goes here</li>
 				</ul>
-			</div>
-			<div id="graphDiv">
+				</div>
+
+				<div id="addCommentsDiv">
+				<form id="addCommentsForm">
+				<input type="hidden" id="objectID"/>
+				<input type="textarea" className="addComments" placeholder="Add comments here" id="addCommentBox" />
+				</form>
+				</div>
+
+				<div id="graphDiv">
 				// var plot = $("#graphDiv").plot(data, options).data("plot"); //https://github.com/flot/flot/blob/master/API.md
-			</div>
-			</div>
-		)
+				</div>
+
+				</div>
+			)
 		}
 	}
 });
 
-
-
 module.exports = VideoPlayer;
+
+
+// var $pop = Popcorn("#video");
+// $pop.listen( "timeupdate", function() {
+//     console.log( this.currentTime() );
+// });
+// $pop.play();
 
 
