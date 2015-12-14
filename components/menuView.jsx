@@ -76,8 +76,8 @@ var MenuView = React.createClass({
 	},
 	renderThumb: function (menuData) {
 		return (
-		<li><div><Link to={"/VideoPlayer/" + menuData.objectId}><img src={menuData.imageURL}/></Link></div>
-		<div>{menuData.videoInfo}</div></li>)
+		<li><div id="thumbOne"><Link to={"/VideoPlayer/" + menuData.objectId}><img src={menuData.imageURL}/></Link></div>
+		<div id="thumbTwo">{menuData.videoInfo}</div></li>)
 
 	}
 });

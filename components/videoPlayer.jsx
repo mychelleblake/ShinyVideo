@@ -38,7 +38,7 @@ var PopcornPlayer = React.createClass({
 		console.log(pop);
 		pop.controls(true);
 		pop.loop(false);
-		pop.autoplay(true);
+		pop.autoplay(false);
 	},
 
 	render: function() {
