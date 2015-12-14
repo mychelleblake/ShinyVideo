@@ -15,15 +15,16 @@ body {background-color: white; color: #92A8D1; width: 1280; margin: 0 auto;}
 
 /* 2. NAV MENU */
 
-#navMenu {width: 1280px; height: 20px;}
+#navMenu {width: 1280px; height: 30px; display: block;}
 
-#headerNav h1 {margin: 0; padding: 0; margin-left: 5px; display: inline-block; width: 100px; float: left;}
+#headerNav h1 {margin: 0; padding: 0; padding-top: 0; margin-left: 5px; display: inline-block; width: 100px; float: left;}
 
-#navMenu ul {list-style-type: none; float: right; margin-right: 10px;}
+#navMenu ul {list-style-type: none; float: right; margin-right: 10px; padding-top: 0;}
 
-#navMenu li {list-style-type: none; float: left; margin-right: 20px; text-align: center;}
+#navMenu li {list-style-type: none; float: left; margin-right: 20px; text-align: center; padding-top: 0;}
 
-#navMenu button {background-color: #F7CAC9; font-weight: bold;}
+/*#navMenu button {background-color: #F7CAC9; font-weight: bold;}*/
+
 
 
 /* 3. MENU VIEW PAGE */
@@ -33,6 +34,8 @@ body {background-color: white; color: #92A8D1; width: 1280; margin: 0 auto;}
 #thumbs ul {width: 700px; float:right; list-style-type: none; }
 
 #thumbs li {list-style-type: none; float: left; margin-right: 10px;}
+
+
 
 /* 4. DOCUMENTATION PAGE */
 
