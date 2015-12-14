@@ -108,21 +108,9 @@ var VideoPlayer = React.createClass({
 });
 
 
-
 //Adds Comments Box
 
 var AddComments = React.createClass({
-	getDefaultProps: function () {
-		return {
-			data: {
-				objectID: "",
-				videoURL: "",
-				imageURL: "",
-				description: "",
-				comments: ""
-			}
-		}
-	},
 	render: function () {
 		return (
 			<div id="addCommentsDiv">
@@ -136,46 +124,35 @@ var AddComments = React.createClass({
 });
 
 //Scrolling Comments Box
-/*
+
 var ScrollingComments = React.createClass({
-	getDefaultProps: function () {
-		return {
-			data: {
-				objectId: "",
-				comments: ""
-			}
-		}
+	render: function () {
+		return (
+			<div id="scrollingCommentsDiv">
+				<ul>
+					<li>data here</li>
+				</ul>
+			</div>
+		)
 	}
-render: function () {
-	return (
-		<div id="scrollingCommentsDiv">
-			<ul>
-				<li>{this.props.data.comments}</li>
-			</ul>
-		</div>
 });
+
 
 //Graph Box
 
 var GraphBox = React.createClass ({
-	getDefaultProps: function () {
-		return {
-			data: {
-				objectId: "",
-				comments: ""
-			}
-		}
+	render: function () {
+		return (
+			<div id="graphDiv">
+				// var plot = $("#graphDiv").plot(data, options).data("plot"); //https://github.com/flot/flot/blob/master/API.md
+			</div>
+		)
 	}
-render: function () {
-	return (
-		<div id="graphDiv">
-			var plot = $("#graphDiv").plot(data, options).data("plot"); //https://github.com/flot/flot/blob/master/API.md
-		</div>
 });
 
 
 
-*/
+
 module.exports = VideoPlayer;
 
 
