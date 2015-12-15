@@ -75,7 +75,6 @@ var VideoPlayer = React.createClass({
 			}
 		});
 	},
-
 	render: function () {
 		if (this.state.keyVideos.length==0)
 		{
@@ -93,44 +92,126 @@ var VideoPlayer = React.createClass({
 							<PopcornPlayer src={playingVideo.videolink} />
 						</div>
 					</div>
-
-					<div id="scrollingCommentsDiv">
-						<ul>
-							<li>scrolling data goes here</li>
-						</ul>
-					</div>
-
-					<div id="addCommentsDiv">
-					<form id="addCommentsForm">
-					<input type="hidden" id="objectID"/>
-					<input type="textarea" className="addComments" placeholder="Add comments here" id="addCommentBox" />
-					</form>
-					</div>
-
-					<div id="graphDiv">
-					// var plot = $("#graphDiv").plot(data, options).data("plot"); //https://github.com/flot/flot/blob/master/API.md
-					</div>
-
 				</div>
 			)
 		}
 	}
 });
 
+//This is where I'm at 
+//Steps - 1. person inputs a comment in AddBox - computer checks for events and logs time and comments into object
+//2. sends to scrollbox (not sure that's in here)
+//3. saves to parse (figuring that out)
+
+var AddBox = React.createClass({
+	getInitialState: function() {
+		$("#addCommentsForm").on("submit", handler) {
+  		event.preventDefault();
+  		}
+	}
+}),
+componentDidMount: function () {
+	this.setState({
+		time: this.props.currentTime,
+		comment: this.props.comment
+	})
+},
+_handleChange: function(e) {
+	var timeComments = this.props.comments;
+	this.setState({
+		time: this.props.currentTime,
+		comment: this.props.comment
+	});
+},
+_changeScroll: function (e) {
+	e.preventDefault();
+	this.setState({
+		$(ScrollBox).scrollTop()
+	})
+},
+	// keyVideos[].set({
+	// time: $("#time").val(),
+	// comments: $("#comments").val(),
+	// objectId: $("#objectId").val()
+	// })
+	// $("#time").val("");
+	// $("#comments").val("");
+	// $("#objectId").val("");
+	// keyVideos.save(null, {
+	// success: function(resp){
+	// },error: function(err){
+	// console.log("error ", err);
+	return {
+		keyVideos: [],
+			<div>
+				<div id="addCommentsDiv">
+					<form id="addCommentsForm" action=""> //what would the action be?
+						<input type="hidden" id="objectID"/>
+						<input type="textarea" className="addComments" placeholder="Add comments here" id="addCommentBox" value={this.props.comments}/>
+						<input type="submit" value="submit">
+					</form>
+				</div>
+			</div>
+		}
+	}
+});
+
+
+//Not done yet
+
+var ScrollBox = React.createClass({
+	getInitialState: function() {
+		return {
+			keyVideos: [],
+				<div>
+					<div id="scrollingCommentsDiv">
+						<ul>
+							<li>scrolling data goes here</li>
+						</ul>
+				</div>
+		}
+	}
+});
+	
+
+
+
+
+			
+var GraphBox = React.createClass ({
+	render: function () {
+		return (
+			<div>
+				<div id="graphDiv">
+					<p>Coming soon...</p>			
+				</div>
+			</div>
+		)
+	}
+});
+					
+
 module.exports = VideoPlayer;
 
 
+//Steps:
+//1. Make compments
+//2. Get count time 
+//3. Save to parse (componentDidMount)
+//4. Check every 1/2 second
+//5. Set scroll position (componentwillreceiveprops)
 
+//The scroll div will change state - pass props - change propos - look at React state
+
+//use underscore extend method - compares two objects
 
 // componentWillReceiveProps: function (newProps) {
 // 	this.props
 // 	newProps
 // }
 
-// var $pop = Popcorn("#video");
-// $pop.listen( "timeupdate", function() {
-//     console.log( this.currentTime() );
-// });
-// $pop.play();
 
 
+
+
+// var plot = $("#graphDiv").plot(data, options).data("plot"); //https://github.com/flot/flot/blob/master/API.md
