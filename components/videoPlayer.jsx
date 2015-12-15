@@ -32,9 +32,10 @@ var PopcornPlayer = React.createClass({
 		pop.controls(true);
 		pop.loop(false);
 		pop.autoplay(false);
-
-	},
-
+		pop.on("timeupdate", function() {
+    		console.log(this.currentTime() );
+	})
+},
 	render: function() {
 		return (
 			<div>
