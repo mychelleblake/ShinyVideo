@@ -7,9 +7,13 @@
 
 /* SCROLLING COMMENTS STYLING */
 
-#scrollingCommentsDiv {width: 400px; height: 345px; margin-top: 55px; margin-left: 10px; float: left; background-color: blue; display: inline-block;}
+#scrollingCommentsDiv {width: 400px; height: 275px; overflow-x: hidden; overflow-y: scroll; margin-top: 55px; margin-left: 10px; float: left; background-color: blue; display: inline-block;}
 
 #scrollingCommentsDiv li {list-style-type: none;}
+
+.current-comment{
+	background: #EE3333;
+}
 
 
 
