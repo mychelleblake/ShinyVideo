@@ -6,20 +6,22 @@ var Documentation = React.createClass({
 		return (
 			<div id="documentationDiv">
 				<div id="descriptionHeader" className="docuInfo">
+					<h1>Library</h1>
+					<h3>Instructions for Installation</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore cupiditate aperiam natus iure exercitationem odio sunt ut recusandae minus. Aliquid impedit soluta laudantium asperiores itaque. Corporis facilis nemo repellat quasi expedita, aliquam voluptatum esse, fuga ullam minima laboriosam cumque suscipit ipsa cum accusamus temporibus iusto quidem, perferendis doloribus sed quaerat quod.</p>
 				</div>
 
-				<div id="documentation1">
-					<h3>Lorem ipsum dolor sit amet</h3>
+				<div id="documentation1" className="docuInfo">
+					<h3>Package.JSON File</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste soluta consequatur fuga, molestias, reiciendis sint architecto inventore qui autem illum officia deleniti ab, corporis! Fuga et, quibusdam sapiente perspiciatis neque corporis aut recusandae! </p>
 				</div>
 
-				<div id="documentation2">
-					<h3>Lorem ipsum dolor sit amet</h3>
+				<div id="documentation2" className="docuInfo">
+					<h3>GitHub Repository</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste soluta consequatur fuga, molestias, reiciendis sint architecto inventore qui autem illum officia deleniti ab, corporis! Fuga et, quibusdam sapiente perspiciatis neque corporis aut recusandae! </p>
 				</div>
 
-				<div id="documentation3">
+				<div id="documentation3" className="docuInfo">
 					<h3>Lorem ipsum dolor sit amet</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste soluta consequatur fuga, molestias, reiciendis sint architecto inventore qui autem illum officia deleniti ab, corporis! Fuga et, quibusdam sapiente perspiciatis neque corporis aut recusandae! </p>
 				</div>	
