@@ -6,7 +6,7 @@ serenity blue 92A8D1, 89ABE3
 
 body {background-color: #10206B; color: #92A8D1; width: 1280; margin: 0 auto; font-family: "Oxygen", sans serif;}
 
-#container {display: block;}
+#container {display: inline-block;}
 
 #headerVideo {width: 1280px; height: 720px; display: block; clear:both;}
 
