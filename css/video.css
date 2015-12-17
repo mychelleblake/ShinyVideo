@@ -4,6 +4,9 @@
 
 #theVideoPlayer {width: 550px; height: 375px;}
 
+#videoPage {background-color: #D3D3D3; background-repeat: repeat; width: 1280px; height: 1400px; margin-top: 30px; }
+/*#menuViewDiv {width: 1280px; height: 1400px; display: block; color: black; list-style-type: none; margin-top: 30px; background-color: #D3D3D3; background-repeat: repeat;}
+*/
 
 /* SCROLLING COMMENTS STYLING */
 
@@ -11,19 +14,17 @@
 
 #scrollingCommentsDiv li {list-style-type: none;}
 
-.current-comment{
-	background: #EE3333;
-}
+.current-comment{background: #EE3333;}
 
 
 
 /* ADD COMMENT STYLING */
 
-#addCommentsDiv input {width: 1000px; height: 50px; margin: 0; margin-top:10px; padding: 0;  background-color: red; display: inline-block; margin-left: 10px; }
+#addCommentsDiv input {width: 500px; height: 40px; margin: 0; margin-top:10px; padding: 0; padding-left: 5px; background-color: white; display: inline-block; margin-left: 25px; color: black;}
 
 
 
 /* GRAPH STYLING */
 
-#graphDiv {width: 400px; height: 300px; background-color: pink; margin: 0; margin-top: 10px; margin-left: 10px; padding: 0; display: inline-block; }
+/*#graphDiv {width: 400px; height: 300px; background-color: pink; margin: 0; margin-top: 10px; margin-left: 10px; padding: 0; display: inline-block; }*/
 

@@ -93,7 +93,7 @@ var VideoPlayer = React.createClass({
 				return video.objectId == self.props.params.objectId
 			})
 			return (
-				<div>
+				<div id="videoPage">
 					<div id="videoPlayer">
 						<div id="playerVideo">
 							<PopcornPlayer src={playingVideo.videolink} handleTimeUpdate={self.handleTimeUpdate} />
@@ -177,7 +177,6 @@ render: function(){
 				<form id="addCommentsForm" action="" onSubmit={this.handleFormSubmit}> 
 					<input type="hidden" id="objectID"/>
 					<input type="textarea" className="addComments" placeholder="Add comments here" id="addCommentBox" value={this.state.comments} onChange={this.handleCommentsChange} />
-					<input type="submit" value="submit"/>
 				</form>
 			</div>
 		</div>
