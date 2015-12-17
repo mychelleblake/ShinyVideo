@@ -10,18 +10,17 @@
 
 /* SCROLLING COMMENTS STYLING */
 
-#scrollingCommentsDiv {width: 400px; height: 275px; overflow-x: hidden; overflow-y: scroll; margin-top: 55px; margin-left: 10px; float: left; background-color: blue; display: inline-block;}
+#scrollingCommentsDiv {width: 600px; height: 275px; overflow-x: hidden; overflow-y: scroll; margin-top: 55px; margin-left: 10px; float: left; background-color: white; display: inline-block; color: black;}
 
 #scrollingCommentsDiv li {list-style-type: none;}
 
-.current-comment{background: #EE3333;}
+.current-comment{background: #25AAA0;}
 
 
 
 /* ADD COMMENT STYLING */
 
-#addCommentsDiv input {width: 500px; height: 40px; margin: 0; margin-top:10px; padding: 0; padding-left: 5px; background-color: white; display: inline-block; margin-left: 25px; color: black;}
-
+#addCommentsDiv input {width: 500px; height: 80px; margin: 0; margin-top:10px; padding: 0; padding-left: 5px; background-color: white; display: inline-block; margin-left: 25px; color: black; vertical-align: text-top; line-height: none;}
 
 
 /* GRAPH STYLING */
