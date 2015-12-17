@@ -71,7 +71,7 @@ var VideoPlayer = React.createClass({
 						videoInfo: obj.videoInfo,
 						comments: obj.comments
 					}
-					console.log("here it is ", mapData);
+					console.log("here it is ", mapData); //this is not logging - doesn't seem to be calling to parse
 				})
 				self.setState ({keyVideos: mapData})
 			}, error: function(err) {
@@ -108,7 +108,6 @@ var VideoPlayer = React.createClass({
 	}
 });
 
-//This is where I'm at 
 //Steps - 1. person inputs a comment in AddBox - computer checks for events and logs time and comments into object
 //2. sends to scrollbox (not sure that's in here)
 //3. saves to parse (figuring that out)
@@ -156,7 +155,7 @@ handleFormSubmit: function(e) {
 	var comment = {
 		message: this.state.comments,
 		time: Math.round(this.props.currentTime),
-		name: "Michelle"
+		name: "Mychelle"
 	};
 
 	var video = new VideoLink(this.props.playingVideo);
@@ -170,18 +169,7 @@ handleFormSubmit: function(e) {
 
 	video.save();
 },
-	// commentData[].set({
-	// time: $("#time").val(),
-	// comments: $("#comments").val(),
-	// objectId: $("#objectId").val()
-	// })
-	// $("#time").val("");
-	// $("#comments").val("");
-	// $("#objectId").val("");
-	// keyVideos.save(null, {
-	// success: function(resp){
-	// },error: function(err){
-	// console.log("error ", err);
+
 render: function(){
 	return (
 		<div>
@@ -198,7 +186,6 @@ render: function(){
 });
 
 
-//Not done yet
 
 var ScrollBox = React.createClass({
 	getInitialState: function() {
@@ -267,22 +254,18 @@ var ScrollBox = React.createClass({
 	}
 });
 	
-
-
-
-
 			
-var GraphBox = React.createClass ({
-	render: function () {
-		return (
-			<div>
-				<div id="graphDiv">
-					<p>Coming soon...</p>			
-				</div>
-			</div>
-		)
-	}
-});
+// var GraphBox = React.createClass ({
+// 	render: function () {
+// 		return (
+// 			<div>
+// 				<div id="graphDiv">
+// 					<p>Coming soon...</p>			
+// 				</div>
+// 			</div>
+// 		)
+// 	}
+// });
 					
 module.exports = VideoPlayer;
 
@@ -295,8 +278,6 @@ module.exports = VideoPlayer;
 //5. Set scroll position (componentwillreceiveprops)
 
 //The scroll div will change state - pass props - change propos - look at React state
-
-//use underscore extend method - compares two objects
 
 // componentWillReceiveProps: function (newProps) {
 // 	this.props

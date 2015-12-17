@@ -4,7 +4,7 @@ serenity blue 92A8D1, 89ABE3
 
 /* 1. MAIN SITE AND HOME PAGE VIEW */
 
-body {background-color: white; color: #92A8D1; width: 1280; margin: 0 auto;}
+body {background-color: #10206B; color: #92A8D1; width: 1280; margin: 0 auto; font-family: "Oxygen", sans serif;}
 
 #container {display: block;}
 
@@ -19,10 +19,17 @@ body {background-color: white; color: #92A8D1; width: 1280; margin: 0 auto;}
 
 #headerNav h1 {margin: 0; padding: 0; padding-top: 0; margin-left: 5px; display: inline-block; width: 100px; float: left;}
 
-#navMenu ul {list-style-type: none; float: right; margin-right: 100px; padding-top: 0;}
+#navMenu ul {list-style-type: none; float: right; margin-right: 100px; padding-top: 0; text-decoration: none}
 
-#navMenu li {list-style-type: none; float: left; margin-right: 20px; text-align: center; padding-top: 0;}
+#navMenu li {font-size: 20px; list-style-type: none; float: left; width: 130px; margin-right: 5px; text-align: center; padding-top: 0; text-decoration: none}
 
+#navMenu li a:link {font-size: 20px; text-decoration: none; color: #25AAA0; font-style: bold;}
+
+#navMenu li a:hover {font-size: 20px; text-decoration: none; color: #41D4CF; font-style: bold;}
+
+#navMenu li a:active {font-size: 20px; text-decoration: none; color: #D3D3D3; font-style: bold;}
+
+#navMenu li a:visited {font-size: 20px; text-decoration: none; color: #D3D3D3; font-style: bold;}
 
 
 
