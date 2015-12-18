@@ -1,7 +1,7 @@
 {
-  "name": "tiyfinalproject",
+  "name": "shinyVideo",
   "version": "1.0.0",
-  "description": "",
+  "description": "A video player plugin that allows you to sync comments to video and save to Parse.",
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/mychelleblake/TIYFinalProject.git"
   },
-  "author": "",
+  "author": "Mychelle Blake",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mychelleblake/TIYFinalProject/issues"
