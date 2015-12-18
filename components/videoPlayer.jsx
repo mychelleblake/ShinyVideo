@@ -95,12 +95,13 @@ var VideoPlayer = React.createClass({
 			return (
 				<div id="videoPage">
 					<div id="videoPlayer">
-						<div id="playerVideo">
+						<div id="playerVideo" className="left-pane">
 							<PopcornPlayer src={playingVideo.videolink} handleTimeUpdate={self.handleTimeUpdate} />
 						</div>
-
-						<AddBox currentTime={self.state.currentTime} playingVideo={playingVideo} />
-						<ScrollBox comments={playingVideo.comments} currentTime={self.state.currentTime} />
+						<div className="right-pane">
+							<AddBox currentTime={self.state.currentTime} playingVideo={playingVideo} />
+							<ScrollBox comments={playingVideo.comments} currentTime={self.state.currentTime} />
+						</div>	
 					</div>
 				</div>
 			)
@@ -172,7 +173,7 @@ handleFormSubmit: function(e) {
 
 render: function(){
 	return (
-		<div>
+		<div id="addDiv">
 			<div id="addCommentsDiv">
 				<form id="addCommentsForm" action="" onSubmit={this.handleFormSubmit}> 
 					<input type="hidden" id="objectID"/>
@@ -225,7 +226,7 @@ var ScrollBox = React.createClass({
 		}
 	},
 	render: function() {
-		var comments = this.props.comments
+		var comments = !this.props.comments ? [] : this.props.comments
 			.sort((a, b) => {
 				return a.time > b.time;
 			})
@@ -242,7 +243,7 @@ var ScrollBox = React.createClass({
 			});
 
 		return (
-			<div>
+			<div id="scrollDiv">
 				<div id="scrollingCommentsDiv">
 					<ul ref="list">
 						{comments}
