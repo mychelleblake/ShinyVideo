@@ -98,10 +98,14 @@ var VideoPlayer = React.createClass({
 						<div id="playerVideo" className="left-pane">
 							<PopcornPlayer src={playingVideo.videolink} handleTimeUpdate={self.handleTimeUpdate} />
 						</div>
-						<div className="right-pane">
-							<AddBox currentTime={self.state.currentTime} playingVideo={playingVideo} />
-							<ScrollBox comments={playingVideo.comments} currentTime={self.state.currentTime} />
-						</div>	
+						
+							<div className="right-pane">
+								<ScrollBox comments={playingVideo.comments} currentTime={self.state.currentTime} />
+							</div>	
+							
+							<div className="left-panel">
+								<AddBox currentTime={self.state.currentTime} playingVideo={playingVideo} />
+							</div>
 					</div>
 				</div>
 			)

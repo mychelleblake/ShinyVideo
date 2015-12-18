@@ -1,10 +1,10 @@
 /* VIDEO PLAYER STYLING */
 
-#videoPlayer {height: 375px; margin: 0; padding: 0; margin-top: 40px; display: inline-block; vertical-align: top; margin-left: 10px;}
+#videoPlayer {height: 320px; margin: 0; padding: 0; display: inline-block; vertical-align: top; margin-left: 10px;}
 
 #theVideoPlayer {width: 550px; height: 375px; display: inline-block; }
 
-#videoPage {background-color: #D3D3D3; background-repeat: repeat; width: 1280px; height: 1400px; margin-top: 30px; }
+#videoPage {background-color: #D3D3D3; background-repeat: repeat; width: 1280px; height: 650px; margin-top: 30px; }
 /*#menuViewDiv {width: 1280px; height: 1400px; display: block; color: black; list-style-type: none; margin-top: 30px; background-color: #D3D3D3; background-repeat: repeat;}
 */
 
@@ -12,13 +12,13 @@
 
 /* SCROLLING COMMENTS STYLING */
 
-#scrollingCommentsDiv {width: 600px; height: 275px; overflow-x: hidden; overflow-y: scroll; margin-top: 55px; margin-left: 10px; float: left; background-color: white; display: inline-block; color: #D3D3D3;}
+#scrollingCommentsDiv {width: 600px; height: 420px; overflow-x: hidden; overflow-y: scroll; margin-left: 20px; margin-top: -25px; float: left; background-color: white; display: inline-block; color: #D3D3D3;}
 
 #scrollingCommentsDiv li {list-style-type: none;}
 
 .current-comment{background: #41D4CF; font-style: bold; color:black;}
 
-#scrollDiv {width: 600px; height: 275px; float: left; display: inline-block;}
+#scrollDiv {width: 600px; height: 315px; float: left; display: inline-block;}
 
 
 
@@ -27,7 +27,7 @@
 
 #addCommentsDiv {float:left; display: inline-block; }
 
-#addCommentsDiv input {width: 500px; height: 80px; margin: 0; margin-top:10px; padding: 0; padding-left: 5px; background-color: white; display: inline-block; margin-left: 25px; color: black; vertical-align: text-top; line-height: none;}
+#addCommentsDiv input {width: 540px; height: 60px; margin: 0; margin-top:10px; padding: 0; padding-left: 5px; background-color: white; display: inline-block; color: black; vertical-align: text-top; line-height: none; border: 2px black solid;}
 
 #addCommentsForm {float: left; }
 
