@@ -71,7 +71,7 @@ var VideoPlayer = React.createClass({
 						videoInfo: obj.videoInfo,
 						comments: obj.comments
 					}
-					console.log("here it is ", mapData); //this is not logging - doesn't seem to be calling to parse
+					console.log("here it is ", mapData); 
 				})
 				self.setState ({keyVideos: mapData})
 			}, error: function(err) {

@@ -3,10 +3,11 @@ serenity blue 92A8D1, 89ABE3
 */
 
 /*background-color: #10206B;*/
+/*background-image: url("/assets/black-dreams-in-blue-website-background.jpg"*/
 
 /* 1. MAIN SITE AND HOME PAGE VIEW */
 
-body {background-image: url("/assets/black-dreams-in-blue-website-background.jpg"); color: #92A8D1; width: 1280; margin: 0 auto; font-family: "Oxygen", sans serif;}
+body {background-color: #10206B; color: #92A8D1; width: 1280; margin: 0 auto; font-family: "Oxygen", sans serif;}
 
 #container {display: inline-block;}
 
@@ -37,9 +38,9 @@ body {background-image: url("/assets/black-dreams-in-blue-website-background.jpg
 
 /* 3. MENU VIEW PAGE */
 
-#menuViewDiv {width: 1280px; height: 1400px; display: block; color: black; list-style-type: none; margin-top: 30px; background-color: #D3D3D3; background-repeat: repeat;}
+#menuViewDiv {width: 1280px; height: 1700px; display: block; color: black; list-style-type: none; margin-top: 30px; background-color: #D3D3D3; background-repeat: repeat;}
 
-#thumbs ul {width: 700px; float:right; list-style-type: none;}
+#thumbs ul {width: 700px; height: 1000px; float:right; list-style-type: none;}
 
 #thumbs li {list-style-type: none; float: left; margin-right: 10px; padding: 0;}
 
