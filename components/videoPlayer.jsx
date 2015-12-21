@@ -173,6 +173,9 @@ handleFormSubmit: function(e) {
 	}
 
 	video.save();
+	this.setState( {
+		comments: ""
+	})
 },
 
 render: function(){
@@ -229,10 +232,39 @@ var ScrollBox = React.createClass({
 			});
 		}
 	},
+	formatTime: function(theTime) {
+		var minutes = Math.floor(theTime/60);
+		var seconds = (theTime%60);
+			if (seconds < 10) {
+				seconds = "0" + seconds;
+			}
+		return minutes + ":" + seconds;
+	},
+
 	render: function() {
 		var comments = !this.props.comments ? [] : this.props.comments
-			.sort((a, b) => {
-				return a.time > b.time;
+			.sort(function (a, b) {
+				if (a.time < b.time) {
+					return -1;   //one on the left comes first
+				}
+				else if (a.time > b.time) {
+					return 1;    // one on the right comes first
+				}
+				else if (a.name < b.name) {
+					return -1;
+				}
+				else if (a.name > b.name) {
+					return 1;
+				}
+				else if (a.message < b.message) {
+					return -1;
+				}
+				else if (a.message > b.message) {
+					return 1;
+				}
+				else {
+					return 0;  // doesn't matter cause they're equal
+				}
 			})
 			.map((comment, i) => {
 				var commentClass = 'comment';
@@ -242,7 +274,7 @@ var ScrollBox = React.createClass({
 				}
 
 				return (
-					<li id={'comment-'+i} key={i} className={commentClass}><strong>{comment.name}</strong> ({comment.time}): <p>{comment.message}</p></li>
+					<li id={'comment-'+i} key={i} className={commentClass}><strong>{comment.name}</strong> ({this.formatTime(comment.time)}): <p>{comment.message}</p></li>
 				);
 			});
 
