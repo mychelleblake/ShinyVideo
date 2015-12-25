@@ -113,44 +113,14 @@ var VideoPlayer = React.createClass({
 	}
 });
 
-//Steps - 1. person inputs a comment in AddBox - computer checks for events and logs time and comments into object
-//2. sends to scrollbox (not sure that's in here)
-//3. saves to parse (figuring that out)
 
 var AddBox = React.createClass({
 getInitialState: function() {
-	/* $("#addCommentsForm").on("submit", handler) {
-		event.preventDefault();
-		}  */
+
 	return {
-		/* commentData: {
-			objectId: obj.objectId, //also objectId is videoId in the relational database...
-			comments: obj.comments,
-			currentTime: obj.currentTime
-		},
-		_parse_class_name: "time",  //this seems funky - how do I get it know which database to go in?
-		idAttribute: "objectId" */
 	}
 },
-componentDidMount: function () {
-	/* this.setState({
-		time: this.props.currentTime,
-		comment: this.props.comment
-	}) */
-},
-_handleChange: function(e) {
-	/* var timeComments = this.props.comments;
-	this.setState({
-		time: this.props.currentTime,
-		comment: this.props.comment
-	}); */
-},
-_changeScroll: function (e) {
-	e.preventDefault();
-	/* this.setState({
-		$(ScrollBox).scrollTop() //but how do I SEND the text to ScrollBox?
-	}) */
-},
+
 handleCommentsChange: function(e) {
 	this.setState({comments: e.target.value});
 },
@@ -291,34 +261,6 @@ var ScrollBox = React.createClass({
 });
 	
 			
-// var GraphBox = React.createClass ({
-// 	render: function () {
-// 		return (
-// 			<div>
-// 				<div id="graphDiv">
-// 					<p>Coming soon...</p>			
-// 				</div>
-// 			</div>
-// 		)
-// 	}
-// });
 					
 module.exports = VideoPlayer;
 
-
-//Steps:
-//1. Make compments
-//2. Get count time 
-//3. Save to parse (componentDidMount)
-//4. Check every 1/2 second
-//5. Set scroll position (componentwillreceiveprops)
-
-//The scroll div will change state - pass props - change propos - look at React state
-
-// componentWillReceiveProps: function (newProps) {
-// 	this.props
-// 	newProps
-// }
-
-
-// var plot = $("#graphDiv").plot(data, options).data("plot"); //https://github.com/flot/flot/blob/master/API.md
