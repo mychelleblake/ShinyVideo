@@ -7,7 +7,7 @@ serenity blue 92A8D1, 89ABE3
 
 /* 1. MAIN SITE AND HOME PAGE VIEW */
 
-body {background-color: #10206B; color: #92A8D1; width: 1280; margin: 0 auto; font-family: "Oxygen", sans serif;}
+body {background-color: #10206B; color: #92A8D1; width: 1280; margin: 0 auto; font-family: "Helvetica", sans serif;}
 
 #container {display: inline-block;}
 
@@ -20,7 +20,7 @@ body {background-color: #10206B; color: #92A8D1; width: 1280; margin: 0 auto; fo
 
 #navMenu {width: 1280px; height: 30px; display: block;}
 
-#headerNav h1 {margin: 0; padding: 0; padding-top: 0; margin-left: 5px; display: inline-block; width: 100px; float: left;}
+#headerNav h1 {font-family: "Oxygen", sans-serif; margin: 0; padding: 0; padding-top: 0; margin-left: 5px; display: inline-block; width: 100px; float: left;}
 
 #navMenu ul {list-style-type: none; float: right; margin-right: 100px; padding-top: 0; text-decoration: none}
 
@@ -44,11 +44,11 @@ body {background-color: #10206B; color: #92A8D1; width: 1280; margin: 0 auto; fo
 
 #thumbs li {list-style-type: none; float: left; margin-right: 10px; padding: 0;}
 
-#thumbOne {width: 400px; height: 200px; float: left; list-style-type: none; padding: 0; margin: 0; margin-top: 10px;}
+#thumbOne {width: 200px; height: 200px; float: left; list-style-type: none; padding: 0; margin: 0; margin-top: 10px;}
 
-#thumbOne img {width: 350px; height: 194px; border-radius: 5%; border: 2px solid black;}
+#thumbOne img {width: 150px; height: 150px; border-radius: 5%; border: 2px solid black;}
 
-#thumbTwo {width: 600px; height: 200px; float: left; list-style-type: none; padding: 0; margin: 0; margin-top: 10px; vertical-align: center;}
+#thumbTwo {width: 900px; height: 200px; float: left; list-style-type: none; padding: 0; margin: 0; margin-top: 10px; vertical-align: center;}
 
 #thumbView {list-style-type: none;}
 

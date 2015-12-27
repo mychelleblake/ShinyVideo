@@ -47,7 +47,11 @@ var MenuView = React.createClass({
 						videolink: obj.videolink,
 						imageURL: obj.imageURL,
 						videoInfo: obj.videoInfo,
-						comments: obj.comments
+						comments: obj.comments,
+						title: obj.title,
+						timeLength: obj.timeLength,
+						dateLoaded: obj.dateLoaded,
+						category: obj.category
 					}
 					console.log("here it is ", mapData);
 				})
@@ -66,7 +70,12 @@ var MenuView = React.createClass({
 							this.state.keyVideos.map(this.renderThumb)
 						}
 							<li><a href={this.props.videolink}><img src={this.props.imageURL}/></a></li>
-							<li>{this.props.videoInfo}</li>
+							<li>
+								{this.props.title}
+								{this.props.videoInfo}
+								<span id="menu3">{this.props.timeLength}</span>
+								<span id="menu4">{this.props.dateLoaded}</span>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -74,8 +83,16 @@ var MenuView = React.createClass({
 	},
 	renderThumb: function (menuData) {
 		return (
-		<li><div id="thumbOne"><Link to={"/VideoPlayer/" + menuData.objectId}><img src={menuData.imageURL}/></Link></div>
-		<div id="thumbTwo">{menuData.videoInfo}</div></li>)
+		<li><div id="thumbOne">
+				<Link to={"/VideoPlayer/" + menuData.objectId}><img src={menuData.imageURL}/>
+				</Link>
+			</div>
+			<div id="thumbTwo">
+				<span id="menu1">{menuData.title}</span><br/>
+				{menuData.videoInfo}
+				<span id="menu3">Video length: {menuData.timeLength}</span>
+				<span id="menu4">Date uploaded: {menuData.dateLoaded}</span>
+			</div></li>)
 
 	}
 });
