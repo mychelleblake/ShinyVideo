@@ -97,7 +97,7 @@ var MenuView = React.createClass({
 			<div id="thumbTwo">
 				<h4>{menuData.title}</h4><br/>
 				{menuData.videoInfo}<br/>
-				<span id="menu3">Video length: {menuData.timeLength}</span>
+				<span id="menu3">Video length: {menuData.timeLength}</span><br/>
 				<span id="menu4">Date uploaded: {menuData.dateLoaded}</span>
 				<hr id="line-separator"></hr>
 			</div>

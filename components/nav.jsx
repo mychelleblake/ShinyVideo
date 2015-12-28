@@ -11,7 +11,7 @@ var Nav = React.createClass({
 			<div>
 			<div id="navMenu">
 				<div id="headerShiny">
-					<h1>shinyVideo</h1>
+					<img src="/assets/film.png"/><h1>shinyVideo</h1>
 				</div>
 					<ul>
 						<li><Link to="/">Home</Link></li>

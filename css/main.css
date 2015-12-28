@@ -22,13 +22,15 @@ body {background-color: #ededed; color: #92A8D1; width: 900px; margin: 0 auto; p
 
 #headerShiny h1 {font-family: "Cabin", sans-serif; font-style: bold; margin: 0; padding: 0; padding-top: 0; margin-left: 5px; margin-bottom: 1px; display: inline-block; width: 100px; height: 15px; float: left; color:  #334185;}
 
+#headerShiny img {width: 40px; width: 40px; display: inline-block; padding: 0; margin: 0; float: left;}
+
 #navMenu ul {list-style-type: none; float: right; margin-right: 5px; padding-top: 0; text-decoration: none}
 
 #navMenu li {font-size: 12px; list-style-type: none; float: left; width: 90px; text-align: center; padding-top: 0; text-decoration: none}
 
 #navMenu li a:link {font-size: 16px; text-decoration: none; color: #000000;}
 
-#navMenu li a:hover {font-size: 16px; text-decoration: none; color: #0000e5; font-style: bold; background-color: white}
+#navMenu li a:hover {font-size: 16px; text-decoration: none; color: #0000e5; font-style: bold;}
 
 #navMenu li a:active {font-size: 16px; text-decoration: none; color: #000000;}
 
@@ -38,7 +40,7 @@ body {background-color: #ededed; color: #92A8D1; width: 900px; margin: 0 auto; p
 
 /* 3. MENU VIEW PAGE */
 
-#menuViewDiv {width: 900px; display: block; color: black; list-style-type: none; margin-top: 30px; background-color: #dbdbdb; background-repeat: repeat;}
+#menuViewDiv {width: 900px; height: 2150px; display: block; color: black; list-style-type: none; margin-top: 30px; background-color: #dbdbdb; background-repeat: repeat;}
 
 #thumbs ul {width: 700px; float:right; list-style-type: none;}
 
@@ -54,9 +56,15 @@ body {background-color: #ededed; color: #92A8D1; width: 900px; margin: 0 auto; p
 
 #thumbTwo h4 {margin-top: 0; margin-bottom: 0; padding: 0;}
 
-#line-separator {height:3px; border-bottom:1px solid #0000000; width: 660px; display: inline-block;}
+#line-separator {height:3px; border-bottom:1px solid #0000000; width: 660px; display: inline-block; margin-bottom: 0;}
 
-#catHeading {width: 200px;}
+#catHeading {width: 200px; margin-left: 10px; display: inline-block; padding-bottom: 0;}
+
+#instructions {margin-top: 10px; padding-top: 10px; margin-left: 10px; width: 880px;}
+
+
+
+
 
 /* 4. DOCUMENTATION PAGE */
 
