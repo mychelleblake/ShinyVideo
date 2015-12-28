@@ -7,7 +7,7 @@ serenity blue 92A8D1, 89ABE3
 
 /* 1. MAIN SITE AND HOME PAGE VIEW */
 
-body {background-color: #f1f1f1; color: #92A8D1; width: 900px; margin: 0 auto; padding: 0; font-family: "Helvetica", sans serif;}
+body {background-color: #ededed; color: #92A8D1; width: 900px; margin: 0 auto; padding: 0; font-family: "Helvetica", sans serif;}
 
 #container {display: inline-block;}
 
@@ -38,27 +38,29 @@ body {background-color: #f1f1f1; color: #92A8D1; width: 900px; margin: 0 auto; p
 
 /* 3. MENU VIEW PAGE */
 
-#menuViewDiv {width: 900px; height: 1700px; display: block; color: black; list-style-type: none; margin-top: 30px; background-color: #D3D3D3; background-repeat: repeat;}
+#menuViewDiv {width: 900px; display: block; color: black; list-style-type: none; margin-top: 30px; background-color: #dbdbdb; background-repeat: repeat;}
 
-#thumbs ul {width: 700px; height: 1000px; float:right; list-style-type: none;}
+#thumbs ul {width: 700px; float:right; list-style-type: none;}
 
-#thumbs li {list-style-type: none; float: left; margin-right: 10px; padding: 0;}
+#thumbs li {list-style-type: none; float: left; margin-right: 10px; padding: 0; }
 
 #thumbOne {width: 110px; height: 105px; float: left; list-style-type: none; padding: 0; margin: 0; margin-top: 10px; }
 
-#thumbOne img {width: 100px; height: 100px; border-radius: 5%; border-top-left-radius: 20%; border: 2px solid black;}
+#thumbOne img {width: 100px; height: 100px; border-radius: 5%; border-top-left-radius: 30%; border: 2px solid black;}
 
-#thumbTwo {width: 670px; height: 105px; float: left; list-style-type: none; padding: 0; margin: 0; margin-top: 10px; vertical-align: center; margin-right: 10px; font-size: 12px;}
+#thumbTwo {width: 660px; height: 105px; float: left; list-style-type: none; padding: 0; margin: 0; margin-top: 10px; vertical-align: center; margin-right: 10px; margin-left: 10px; font-size: 12px;}
 
 #thumbView {list-style-type: none;}
 
-#thumbTwo h4 {margin-top: 0; margin-bottom: 0;}
+#thumbTwo h4 {margin-top: 0; margin-bottom: 0; padding: 0;}
 
+#line-separator {height:3px; border-bottom:1px solid #0000000; width: 660px; display: inline-block;}
 
+#catHeading {width: 200px;}
 
 /* 4. DOCUMENTATION PAGE */
 
-#documentationDiv {width: 900px; height: 900px; display: block; padding-left: 40px; margin-top:30px; margin-right: 30px; color: black; background-color: #D3D3D3; background-repeat: repeat; padding-top: 10px; padding-left: 10px;}
+#documentationDiv {width: 900px; height: 900px; display: block; padding-left: 40px; margin-top:30px; margin-right: 30px; color: black; background-color: #dbdbdb; background-repeat: repeat; padding-top: 10px; padding-left: 10px;}
 
 .docuInfo {width: 900px; padding-left: 20px;
 

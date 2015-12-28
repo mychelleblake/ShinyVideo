@@ -1,6 +1,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var ReactRouter = require("react-router");
+var underscore = require("underscore");
 
 var Link = ReactRouter.Link;
 
@@ -62,24 +63,30 @@ var MenuView = React.createClass({
 		});
 	},
 	render: function () {
+		var groups = underscore.groupBy (this.state.keyVideos,"category");
+			console.log(groups);
 			return (
 				<div>
 					<div id="menuViewDiv">
-						<ul id="thumbView">
+						<div id="instructions">hjkhjkgjfhddkytdkuyflu</div>
 						{
-							this.state.keyVideos.map(this.renderThumb)
+							underscore.map(groups, this.renderCategory)
 						}
-							<li><a href={this.props.videolink}><img src={this.props.imageURL}/></a></li>
-							<li>
-								{this.props.title}
-								{this.props.videoInfo}
-								<span id="menu3">{this.props.timeLength}</span>
-								<span id="menu4">{this.props.dateLoaded}</span>
-							</li>
-						</ul>
+
 					</div>
 				</div>
 			)
+	},
+		renderCategory: function (catVideos, category) {
+		return (
+			<div>
+			<h3 id="catHeading">{category}</h3>
+			<ul id="thumbView">			
+				{
+					catVideos.map(this.renderThumb)
+				}
+			</ul>
+			</div>)
 	},
 	renderThumb: function (menuData) {
 		return (
@@ -92,7 +99,9 @@ var MenuView = React.createClass({
 				{menuData.videoInfo}<br/>
 				<span id="menu3">Video length: {menuData.timeLength}</span>
 				<span id="menu4">Date uploaded: {menuData.dateLoaded}</span>
-			</div></li>)
+				<hr id="line-separator"></hr>
+			</div>
+			</li>)
 
 	}
 });

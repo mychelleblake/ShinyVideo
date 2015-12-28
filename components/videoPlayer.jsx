@@ -118,11 +118,16 @@ var AddBox = React.createClass({
 getInitialState: function() {
 
 	return {
+		name: "",
+		comments: ""
 	}
 },
 
 handleCommentsChange: function(e) {
 	this.setState({comments: e.target.value});
+},
+handleNameChange: function(e) {
+	this.setState({name: e.target.value});
 },
 handleFormSubmit: function(e) {
 	e.preventDefault();
@@ -130,7 +135,7 @@ handleFormSubmit: function(e) {
 	var comment = {
 		message: this.state.comments,
 		time: Math.round(this.props.currentTime),
-		name: "Mychelle"
+		name: this.state.name
 	};
 
 	var video = new VideoLink(this.props.playingVideo);
@@ -144,7 +149,8 @@ handleFormSubmit: function(e) {
 
 	video.save();
 	this.setState( {
-		comments: ""
+		comments: "",
+		name: ""
 	})
 },
 
@@ -154,7 +160,9 @@ render: function(){
 			<div id="addCommentsDiv">
 				<form id="addCommentsForm" action="" onSubmit={this.handleFormSubmit}> 
 					<input type="hidden" id="objectID"/>
+					<input type="text" className="addName" placeholder="Your name" id="addNameBox" value={this.state.name} onChange={this.handleNameChange} />
 					<input type="textarea" className="addComments" placeholder="Add comments here" id="addCommentBox" value={this.state.comments} onChange={this.handleCommentsChange} />
+					<input type="submit" className="submitButton" id="submitButton" value="Submit"/>
 				</form>
 			</div>
 		</div>
