@@ -10,6 +10,9 @@ var Nav = React.createClass({
 		return (
 			<div>
 			<div id="navMenu">
+				<div id="headerShiny">
+					<h1>shinyVideo</h1>
+				</div>
 					<ul>
 						<li><Link to="/">Home</Link></li>
 						<li><Link to="/MenuView">Video Menu</Link></li>
