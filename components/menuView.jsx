@@ -68,7 +68,10 @@ var MenuView = React.createClass({
 			return (
 				<div>
 					<div id="menuViewDiv">
-						<div id="instructions">hjkhjkgjfhddkytdkuyflu</div>
+						<div id="instructions">
+							<h2>Demo Instructions</h2>
+							<p>shinyVideo provides a Javascript library that allows you to comment on a video in play and play back the comments in sync to the video. Multiple users may comment and identify themselves with their names. To view a demo, click on any thumbnail image below to be taken to the video player page. Videos are arranged below by video category.</p>
+							</div>
 						{
 							underscore.map(groups, this.renderCategory)
 						}
@@ -80,7 +83,7 @@ var MenuView = React.createClass({
 		renderCategory: function (catVideos, category) {
 		return (
 			<div>
-			<h3 id="catHeading">{category}</h3>
+			<h4 id="catHeading">{category}</h4>
 			<ul id="thumbView">			
 				{
 					catVideos.map(this.renderThumb)
