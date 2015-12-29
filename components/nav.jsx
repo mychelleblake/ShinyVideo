@@ -21,7 +21,7 @@ var Nav = React.createClass({
 					
 			</div>
 			<div id="tagLine">
-						<p>A Javascript library solution for real-time interaction with online video.</p>
+						<p>A Javascript library solution for real-time interaction with online video</p>
 					</div>
 			</div>
 		);

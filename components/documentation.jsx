@@ -4,6 +4,12 @@ var ReactDOM = require('react-dom');
 var Documentation = React.createClass({
 	render: function () {
 		return (
+			<div>
+
+
+
+
+
 			<div id="documentationDiv">
 				<div id="descriptionHeader" className="docuInfo">
 					<h1>Library</h1>
@@ -27,6 +33,7 @@ var Documentation = React.createClass({
 					<p>Lorem ipsum dolor sit amet, 
 					consectetur adipisicing elit. Iste soluta consequatur fuga, molestias, reiciendis sint architecto. </p>
 				</div>	
+			</div>
 			</div>
 		)
 	}
