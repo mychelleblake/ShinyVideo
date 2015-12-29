@@ -17,8 +17,12 @@ var Nav = React.createClass({
 						<li><Link to="/">Home</Link></li>
 						<li><Link to="/MenuView">Video Menu</Link></li>
 						<li><Link to="/Library">Library</Link></li>
-					</ul>
+					</ul><br/>
+					
 			</div>
+			<div id="tagLine">
+						<p>A Javascript library solution for real-time interaction with online video.</p>
+					</div>
 			</div>
 		);
 	}

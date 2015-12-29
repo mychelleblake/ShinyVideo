@@ -19,7 +19,7 @@ var HomeView = React.createClass({
 					<source src="../assets/shinyVideoNew.mp4"></source>
 					</video>
 				</div>
-				<p id="tagLine">A Javascript library solution for real-time interaction with online video.</p>
+				
 			</div>
 		)
 	}
