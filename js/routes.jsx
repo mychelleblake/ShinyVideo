@@ -7,12 +7,16 @@ var Documentation = require ("../components/documentation.jsx");
 var MenuView = require ("../components/menuView.jsx");
 var VideoPlayer = require ("../components/videoPlayer.jsx");
 var Nav = require("../components/nav.jsx");
+var TheFooter = require("../components/footer.jsx");
 
 var Layout = React.createClass ({
 	render: function () {
 		return (
 			<div><Nav/>
 				<div>{this.props.children}
+				</div>
+				<div>
+				<TheFooter/>
 				</div>
 			</div>
 		)

@@ -70,6 +70,34 @@ body {background-color: #ededed; color: #92A8D1; width: 900px; margin: 0 auto; p
 
 #documentationDiv {width: 900px; height: 900px; display: block; padding-left: 40px; margin-top:30px; margin-right: 30px; color: black; background-color: #dbdbdb; background-repeat: repeat; padding-top: 10px; padding-left: 10px;}
 
-.docuInfo {width: 900px; padding-left: 20px;
+.docuInfo {width: 900px; padding-left: 20px;}
 
-}
+
+
+
+/* 5. FOOTER */
+
+
+#theFooter {width: 900px; height: 30px; display: inline-block; color: white; list-style-type: none; background-color: black; font-size: 11px;}
+
+#theFooter p {margin-left: 10px; display: inline-block;}
+
+#theFooter p a:link {font-size: 11px; text-decoration: none; color: white;}
+
+#theFooter p a:hover {font-size: 11px; text-decoration: none; color: #ededed; font-style: bold;}
+
+#theFooter p a:active {font-size: 11px; text-decoration: none; color: white;}
+
+#theFooter p a:visited {font-size: 11px; text-decoration: none; color: white;}
+
+#theFooter ul {list-style-type: none; float: right; margin-right: 5px; padding-top: 0; text-decoration: none}
+
+#theFooter li {font-size: 11px; list-style-type: none; float: left; width: 90px; text-align: center; padding-top: 0; text-decoration: none}
+
+#theFooter li a:link {font-size: 11px; text-decoration: none; color: white;}
+
+#theFooter li a:hover {font-size: 11px; text-decoration: none; color: #ededed; font-style: bold;}
+
+#theFooter li a:active {font-size: 11px; text-decoration: none; color: white;}
+
+#theFooter li a:visited {font-size: 11px; text-decoration: none; color: white;}
