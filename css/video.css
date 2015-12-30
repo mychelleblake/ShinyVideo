@@ -6,7 +6,7 @@
 
 #playerVideo {width: 500px; height: 341px; display: inline-block; }
 
-#videoPage {background-color: #D3D3D3; background-repeat: repeat; width: 950px; height: 650px; margin-top: 10px; }
+#videoPage {background-color: #D3D3D3; background-repeat: repeat; width: 900px; height: 650px; margin-top: 10px; }
 /*#menuViewDiv {width: 1280px; height: 1400px; display: block; color: black; list-style-type: none; margin-top: 30px; background-color: #D3D3D3; background-repeat: repeat;}
 */
 
@@ -14,13 +14,15 @@
 
 /* SCROLLING COMMENTS STYLING */
 
-#scrollingCommentsDiv {width: 400px; height: 335px; overflow-x: hidden; overflow-y: scroll; margin-left: 10px; margin-top: -25px; float: left; background-color: white; display: inline-block; color: #D3D3D3; border: 3px double black; font-size: 11px;}
+#scrollingCommentsDiv {width: 350px; height: 335px; overflow-x: hidden; overflow-y: scroll; margin-left: 10px; margin-top: -25px; float: left; background-color: white; display: inline-block; color: #D3D3D3; border: 3px double black; font-size: 11px;padding: 0;}
 
-#scrollingCommentsDiv li {list-style-type: none;}
+#scrollingCommentsDiv li {list-style-type: none; padding: 0; margin: 0; font-size: 12px;}
 
-.current-comment{background: #CCCCCC; font-style: bold; color: #FF0000; font-size: 12px;}
+#scrollingCommentsDiv ul {padding: 0; margin: 0; margin-left: 5px; margin-top: 5px;}
 
-#scrollDiv {width: 400px; height: 315px; float: left; display: inline-block;}
+.current-comment{background: #CCCCCC; font-style: bold; color: #FF0000; font-size: 13px; padding: 0;}
+
+#scrollDiv {width: 350px; height: 315px; float: left; display: inline-block; padding: 0;}
 
 
 
@@ -29,15 +31,15 @@
 
 #addCommentsDiv {float:left; display: inline-block; }
 
-#addCommentsDiv input[type=text] {width: 500px; height: 30px; margin: 0; margin-top:10px; padding: 0; padding-left: 5px; background-color: white; display: inline-block; color: black; vertical-align: text-top; line-height: none; border: 2px black solid;}
+#addCommentsDiv input[type=text] {color: #334185; width: 140px; height: 30px; margin: 0; margin-top:10px; padding: 0; padding-left: 5px; background-color: white; display: inline-block; color: black; vertical-align: text-top; line-height: none; border: 2px black solid; margin-right: 10px;}
 
-#addCommentsDiv input[type=textarea] {width: 500px; height: 30px; margin: 0; margin-top:10px; padding: 0; padding-left: 5px; background-color: white; display: inline-block; color: black; vertical-align: text-top; line-height: none; border: 2px black solid;}
+#addCommentsDiv input[type=textarea] {color: #334185; width: 580px; height: 30px; margin: 0; margin-top:10px; padding: 0; padding-left: 5px; background-color: white; display: inline-block; color: black; vertical-align: text-top; line-height: none; border: 2px black solid; margin-right: 10px;}
 
-#addCommentsDiv input[type=submit] {width: 500px; height: 30px; margin: 0; margin-top:10px; padding: 0; padding-left: 5px; background-color: white; display: inline-block; color: black; vertical-align: text-top; line-height: none; border: 2px black solid;}
+#addCommentsDiv input[type=submit] {text-align: center; background-color: #334185; width: 75px; height: 34px; margin: 0; margin-top:10px; padding: 0; color: white; font-style: bold; display: inline-block; vertical-align: text-top; line-height: none; border: 2px black solid; border-radius: 10%;}
 
 #addCommentsForm {float: left; }
 
-#addDiv {width: 880px; height: 80px; margin-left: 21px;}
+#addDiv {width: 860px; height: 80px; margin-left: 21px;}
 
 
 .left-pane, .right-pane{
