@@ -160,9 +160,9 @@ render: function(){
 			<div id="addCommentsDiv">
 				<form id="addCommentsForm" action="" onSubmit={this.handleFormSubmit}> 
 					<input type="hidden" id="objectID"/>
-					<input type="text" className="addName" placeholder="Your name" id="addNameBox" value={this.state.name} onChange={this.handleNameChange} />
-					<input type="textarea" className="addComments" placeholder="Add comments here" id="addCommentBox" value={this.state.comments} onChange={this.handleCommentsChange} />
-					<input type="submit" className="submitButton" id="submitButton" value="Submit"/>
+					<input type="text" placeholder="Your name" id="addNameBox" value={this.state.name} onChange={this.handleNameChange} />
+					<input type="textarea" placeholder="Add comments here" id="addCommentBox" value={this.state.comments} onChange={this.handleCommentsChange} />
+					<input type="submit" id="submitButton" value="Submit"/>
 				</form>
 			</div>
 		</div>

@@ -2,9 +2,11 @@
 
 #videoPlayer {height: 320px; margin: 0; padding: 0; display: inline-block; vertical-align: top; margin-left: 10px;}
 
-#theVideoPlayer {width: 550px; height: 375px; display: inline-block; }
+#theVideoPlayer {width: 500px; height: 341px; display: inline-block; margin-top:10px;}
 
-#videoPage {background-color: #D3D3D3; background-repeat: repeat; width: 1280px; height: 650px; margin-top: 30px; }
+#playerVideo {width: 500px; height: 341px; display: inline-block; }
+
+#videoPage {background-color: #D3D3D3; background-repeat: repeat; width: 950px; height: 650px; margin-top: 10px; }
 /*#menuViewDiv {width: 1280px; height: 1400px; display: block; color: black; list-style-type: none; margin-top: 30px; background-color: #D3D3D3; background-repeat: repeat;}
 */
 
@@ -12,13 +14,13 @@
 
 /* SCROLLING COMMENTS STYLING */
 
-#scrollingCommentsDiv {width: 600px; height: 420px; overflow-x: hidden; overflow-y: scroll; margin-left: 20px; margin-top: -25px; float: left; background-color: white; display: inline-block; color: #D3D3D3;}
+#scrollingCommentsDiv {width: 400px; height: 335px; overflow-x: hidden; overflow-y: scroll; margin-left: 10px; margin-top: -25px; float: left; background-color: white; display: inline-block; color: #D3D3D3; border: 3px double black; font-size: 11px;}
 
 #scrollingCommentsDiv li {list-style-type: none;}
 
-.current-comment{background: #41D4CF; font-style: bold; color:black;}
+.current-comment{background: #CCCCCC; font-style: bold; color: #FF0000; font-size: 12px;}
 
-#scrollDiv {width: 600px; height: 315px; float: left; display: inline-block;}
+#scrollDiv {width: 400px; height: 315px; float: left; display: inline-block;}
 
 
 
@@ -27,11 +29,15 @@
 
 #addCommentsDiv {float:left; display: inline-block; }
 
-#addCommentsDiv input {width: 540px; height: 60px; margin: 0; margin-top:10px; padding: 0; padding-left: 5px; background-color: white; display: inline-block; color: black; vertical-align: text-top; line-height: none; border: 2px black solid;}
+#addCommentsDiv input[type=text] {width: 500px; height: 30px; margin: 0; margin-top:10px; padding: 0; padding-left: 5px; background-color: white; display: inline-block; color: black; vertical-align: text-top; line-height: none; border: 2px black solid;}
+
+#addCommentsDiv input[type=textarea] {width: 500px; height: 30px; margin: 0; margin-top:10px; padding: 0; padding-left: 5px; background-color: white; display: inline-block; color: black; vertical-align: text-top; line-height: none; border: 2px black solid;}
+
+#addCommentsDiv input[type=submit] {width: 500px; height: 30px; margin: 0; margin-top:10px; padding: 0; padding-left: 5px; background-color: white; display: inline-block; color: black; vertical-align: text-top; line-height: none; border: 2px black solid;}
 
 #addCommentsForm {float: left; }
 
-#addDiv {width: 500px; height: 80px;}
+#addDiv {width: 880px; height: 80px; margin-left: 21px;}
 
 
 .left-pane, .right-pane{
