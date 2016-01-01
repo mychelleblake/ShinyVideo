@@ -5,39 +5,44 @@ var Documentation = React.createClass({
 	render: function () {
 		return (
 			<div>
-
-
-
-
-
-			<div id="documentationDiv">
-				<div id="descriptionHeader" className="docuInfo">
+				<div id="documentationDiv">
 					<h1>Library</h1>
-					<h3>Instructions for Installation and Configuration</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore cupiditate aperiam natus iure exercitationem odio sunt ut recusandae minus. Aliquid impedit soluta laudantium asperiores itaque. Corporis facilis nemo repellat quasi expedita, aliquam voluptatum esse, fuga ullam minima laboriosam cumque suscipit ipsa cum accusamus temporibus iusto quidem, perferendis doloribus sed quaerat quod.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste soluta consequatur fuga, molestias, reiciendis sint architecto inventore qui autem illum officia deleniti ab, corporis! Fuga et, quibusdam sapiente perspiciatis neque corporis aut recusandae! </p>
-				</div>
 
-				<div id="documentation1" className="docuInfo">
-					<h3>Package.JSON File</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste soluta consequatur fuga, molestias, reiciendis sint architecto inventore qui autem illum officia deleniti ab, corporis!  </p>
-				</div>
 
-				<div id="documentation2" className="docuInfo">
-					<h3>GitHub Repository</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste soluta consequatur fuga, molestias, reiciendis sint architecto inventore qui autem illum officia deleniti ab, corporis!  </p>
-				</div>
+<div className="verticalaccordion">
+<ul>
+	<li>
+        <h2>Instructions for Installation and Configuration</h2>
+		<div>Content For Panel 1.</div>
+	</li>
+	<li>
+        <h2>Package JSON File</h2>
+		<div>Content For Panel 2.</div>
+	</li>
+	<li>
+        <h2>GitHub Repository</h2>
+		<div>Content For Panel 3.</div>
+	</li>
+	<li>
+        <h2>Contact</h2>
+		<div>Content For Panel 4</div>
+	</li>
+</ul>
+</div>
 
-				<div id="documentation3" className="docuInfo">
-					<h3>Contact</h3>
-					<p>Lorem ipsum dolor sit amet, 
-					consectetur adipisicing elit. Iste soluta consequatur fuga, molestias, reiciendis sint architecto. </p>
-				</div>	
+
+
+
+
+
+
+
+				</div>
 			</div>
-			</div>
-		)
+		);
 	}
 });
 
 
 module.exports = Documentation;
+
