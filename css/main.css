@@ -100,10 +100,10 @@ body {background-color: #ededed; color: #92A8D1; width: 900px; margin: 0 auto; p
     background-color:#f0f0f0;
 
     /* CSS3 Transition Effect */
-    transition: height 0.3s ease-in-out;
-    -moz-transition: height 0.3s ease-in-out;
-    -webkit-transition: height 0.3s ease-in-out;
-    -o-transition: height 0.3s ease-in-out;
+    transition: height 1.2s ease-in-out;
+    -moz-transition: height 1.2s ease-in-out;
+    -webkit-transition: height 1.2s ease-in-out;
+    -o-transition: height 1.2s ease-in-out;
 
 }
 
@@ -117,7 +117,7 @@ body {background-color: #ededed; color: #92A8D1; width: 900px; margin: 0 auto; p
     border-top:#f0f0f0 1px solid;
     font-family: "Cabin", sans-serif;
     text-decoration:none;
-    color: #000;
+    color: #334185;
     background: #cccccc;
 
     /* CSS3 Gradient Effect */

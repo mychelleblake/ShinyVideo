@@ -6,7 +6,7 @@
 
 #playerVideo {width: 450px; height: 341px; display: inline-block; }
 
-#videoPage {background-color: #D3D3D3; background-repeat: repeat; width: 900px; height: 650px; margin-top: 10px; }
+#videoPage {background-color: #D3D3D3; background-repeat: repeat; width: 900px; height: 500px; margin-top: 10px; }
 /*#menuViewDiv {width: 1280px; height: 1400px; display: block; color: black; list-style-type: none; margin-top: 30px; background-color: #D3D3D3; background-repeat: repeat;}
 */
 
@@ -20,7 +20,11 @@
 
 #scrollingCommentsDiv ul {padding: 0; margin: 0; margin-left: 7px; margin-top: 7px;}
 
-.current-comment{background: #CCCCCC; font-style: bold; color: #FF0000; font-size: 13px; padding: 0;}
+.current-comment {background: #ededed; padding: 0;}
+
+.current-comment span {background: #ededed; font-weight: bold; color: #334185; font-size: 16px; padding: 0;}
+
+.current-comment p {background: #ededed; font-weight: bold; color: #334185; font-size: 16px; padding: 0;}
 
 #scrollDiv {width: 375px; height: 315px; float: left; display: inline-block; padding: 0;}
 
@@ -39,7 +43,7 @@
 
 #addCommentsForm {float: left; }
 
-#addDiv {width: 860px; height: 80px; margin-left: 12px;}
+#addDiv {width: 860px; height: 80px; margin-left: 12px;margin-top: 17px;}
 
 
 .left-pane, .right-pane{
@@ -47,7 +51,8 @@
 }
 
 
-/* GRAPH STYLING */
+/* Print Button */
 
-/*#graphDiv {width: 400px; height: 300px; background-color: pink; margin: 0; margin-top: 10px; margin-left: 10px; padding: 0; display: inline-block; }*/
+#printButton button {float: left; display: inline-block; padding: 0; margin: 0; margin-top: 5px; margin-right: 0px; margin-left: 20px; width: 100px; height: 25px; font-size: 12px; background-color: #334185; color: white; font-style: bold;}
+
 

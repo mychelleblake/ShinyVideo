@@ -252,9 +252,17 @@ var ScrollBox = React.createClass({
 				}
 
 				return (
-					<li id={'comment-'+i} key={i} className={commentClass}><strong>{comment.name}</strong> ({this.formatTime(comment.time)}): <p>{comment.message}</p></li>
+					<li id={'comment-'+i} key={i} className={commentClass}><span>{comment.name}</span> ({this.formatTime(comment.time)}): <p>{comment.message}</p></li>
 				);
-			});
+
+		render: function printContent(el) {
+			var restorepage = document.body.innerHTML;
+			var printcontent = document.getElementbyId(el).innerHTML;
+			document.body.innerHTML = printcontent;
+			window.print();
+			document.body.innerHTML = restorepage;
+			}
+		})
 
 		return (
 			<div id="scrollDiv">
@@ -262,6 +270,9 @@ var ScrollBox = React.createClass({
 					<ul ref="list">
 						{comments}
 					</ul>
+				</div>
+				<div id="printButton">
+				<button onclick="printContent('#scrollingCommentsDiv')">Print Content</button>
 				</div>
 			</div>
 		)
