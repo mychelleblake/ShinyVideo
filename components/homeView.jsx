@@ -16,7 +16,7 @@ var HomeView = React.createClass({
 			<div>
 				<div id="headerVideo">
 					<video id="video"> 			
-					<source src="../assets/shinyVideoNew.mp4"></source>
+					<source src="../assets/shinyVideo.mp4"></source>
 					</video>
 				</div>
 				
