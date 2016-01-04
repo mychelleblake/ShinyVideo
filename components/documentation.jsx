@@ -23,10 +23,11 @@ var Documentation = React.createClass({
 							</li>
 							<li className={this.state.activePane === 3 ? "active": ""}>
 						        <h3 onClick={()=>this.setState({activePane:3})}>Code</h3>
-								<div>The code for the library is available at:
+								<div>The code and information for the library is available at:
 									<ul id="code">
 										<li><a href="https://github.com/mychelleblake/ShinyVideo/blob/master/package.json">Package JSON file</a></li>
 										<li><a href="https://github.com/mychelleblake/ShinyVideo">Github Repository</a></li>
+										<li><a href="https://github.com/mychelleblake/ShinyVideo/blob/master/README.md">README.md file</a></li>
 									</ul>
 								</div>
 							</li>
