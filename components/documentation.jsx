@@ -15,15 +15,15 @@ var Documentation = React.createClass({
 						<ul>
 							<li className={this.state.activePane === 1 ? "active": ""}>
 						        <h3 onClick={()=>this.setState({activePane:1})}>Information for Developers</h3>
-								<div>shinyVideo is a library that allows comments to be timed to a video and played back in sync. It combines HTML, CSS3, <a href="http://www.popcornjs.org" target="_blank">Popcorn.js</a> (a media player) and <a href="https://facebook.github.io/react/" target="_blank">React.js</a>.</div>
+								<div className="libraryText">shinyVideo is a library that allows comments to be timed to a video and played back in sync. It combines HTML, CSS3, <a href="http://www.popcornjs.org" target="_blank">Popcorn.js</a> (a media player) and <a href="https://facebook.github.io/react/" target="_blank">React.js</a>.</div>
 							</li>
 							<li className={this.state.activePane === 2 ? "active": ""}>
 						        <h3 onClick={()=>this.setState({activePane:2})}>Popcorn.js</h3>
-								<div>Documentation for Popcorn.js can be found <a href="http://popcornjs.org/documentation" target="_blank">here</a> and the API reference is <a href="http://popcornjs.org/popcorn-docs/" target="_blank">here</a>.</div>
+								<div className="libraryText">Documentation for Popcorn.js can be found <a href="http://popcornjs.org/documentation" target="_blank">here</a> and the API reference is <a href="http://popcornjs.org/popcorn-docs/" target="_blank">here</a>.</div>
 							</li>
 							<li className={this.state.activePane === 3 ? "active": ""}>
 						        <h3 onClick={()=>this.setState({activePane:3})}>Code</h3>
-								<div>The code and information for the library is available at:
+								<div className="libraryText">The code and information for the library is available at:
 									<ul id="code">
 										<li><a href="https://github.com/mychelleblake/ShinyVideo/blob/master/package.json">Package JSON file</a></li>
 										<li><a href="https://github.com/mychelleblake/ShinyVideo">Github Repository</a></li>
@@ -33,7 +33,7 @@ var Documentation = React.createClass({
 							</li>
 							<li className={this.state.activePane === 4 ? "active": ""}>
 						        <h3 onClick={()=>this.setState({activePane:4})}>Contact</h3>
-								<div>For further information, contact Mychelle Blake at <a href="mailto:mychelle.blake@gmail.com">mychelle.blake@gmail.com</a>, <a href="http://www.twitter.com/mychelleblake" target="_blank">@mychelleblake</a> or <a href="http://www.mychelleblake.com" target="_blank">www.mychelleblake.com.</a></div>
+								<div className="libraryText">For further information, contact Mychelle Blake at <a href="mailto:mychelle.blake@gmail.com">mychelle.blake@gmail.com</a>, <a href="http://www.twitter.com/mychelleblake" target="_blank">@mychelleblake</a> or <a href="http://www.mychelleblake.com" target="_blank">www.mychelleblake.com.</a></div>
 							</li>
 						</ul>
 						</div>
