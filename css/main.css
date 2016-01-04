@@ -11,17 +11,17 @@ body {background-color: #ededed; color: #92A8D1; width: 900px; margin: 0 auto; p
 
 #container {display: inline-block;}
 
-#headerVideo video {width: 900px; height: 506px; display: block; clear:both; margin: 0 auto; padding: 0; padding-top: 5px; padding-bottom: 5px;}
+#headerVideo video {width: 900px; height: 506px; display: block; clear:both; margin: 0 auto; padding: 0; padding-top: 5px; padding-bottom: 0px;}
 
 #tagLine {height: 10px; color: black; font-style: italic;  margin: 0; padding: 0; display: inline-block; clear:both;}
 
-#tagLine p {font-size: 14px;}
+#tagLine p {font-size: 14px; margin-top: 17px;}
 
 /* 2. NAV MENU */
 
-#navMenu {width: 900px; height: 25px; display: block;}
+#navMenu {width: 900px; height: 25px; display: inline-block;}
 
-#headerShiny h1 {font-family: "Cabin", sans-serif; font-style: bolder; margin: 0; padding: 0; padding-top: 0; margin-left: 5px; margin-bottom: 1px; display: inline-block; width: 100px; height: 15px; float: left; color:  #334185;}
+#headerShiny h1 {font-family: "Cabin", sans-serif; font-style: bolder; margin: 0; padding: 0; padding-top: 0; margin-left: 5px; margin-bottom: 1px; display: block; width: 100px; height: 15px; float: left; color:  #334185;}
 
 #headerShiny img {width: 40px; width: 40px; display: inline-block; padding: 0; margin: 0; float: left;}
 
@@ -37,6 +37,10 @@ body {background-color: #ededed; color: #92A8D1; width: 900px; margin: 0 auto; p
 
 #navMenu li a:visited {font-size: 18px; text-decoration: none; color: #000000;}
 
+/*    border: 1px solid black;
+    padding: 10px 20px;
+    background-color: cyan;
+    border-radius: 10px;*/
 
 
 /* 3. MENU VIEW PAGE */
@@ -79,15 +83,19 @@ body {background-color: #ededed; color: #92A8D1; width: 900px; margin: 0 auto; p
 
 /* 4A. LIBRARY PAGE ACCORDION MENU */
 
-
-.verticalaccordion>ul {
-    margin: 0;
-    padding: 0;
-    list-style:none;
-   	width: 880px;
+.verticalAccordion {
+	font-size: 14px;
+	padding: 0;
 }
 
-.verticalaccordion>ul>li {
+.verticalAccordion>ul {
+    margin: 0;
+    list-style:none;
+   	width: 880px;
+   	padding: 0;
+}
+
+.verticalAccordion>ul>li {
     display:block;
 	overflow: hidden;
     margin: 0;
@@ -100,14 +108,14 @@ body {background-color: #ededed; color: #92A8D1; width: 900px; margin: 0 auto; p
     background-color:#f0f0f0;
 
     /* CSS3 Transition Effect */
-    transition: height 1.2s ease-in-out;
-    -moz-transition: height 1.2s ease-in-out;
-    -webkit-transition: height 1.2s ease-in-out;
-    -o-transition: height 1.2s ease-in-out;
+    transition: height 1.2s ease;
+    -moz-transition: height 1.2s ease;
+    -webkit-transition: height 1.2s ease;
+    -o-transition: height 1.2s ease;
 
 }
 
-.verticalaccordion>ul>li>h2 {
+.verticalAccordion>ul>li>h3 {
     display:block;
     margin: 0;
     padding:10px;
@@ -127,18 +135,18 @@ body {background-color: #ededed; color: #92A8D1; width: 900px; margin: 0 auto; p
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff999999, endColorstr=#ffcccccc)";   /* IE 8 */
 }
 
-.verticalaccordion>ul>li>div {
+.verticalAccordion>ul>li>div {
     margin:0;
     overflow: auto;
     padding:10px;
     height:1000px;
 }
 
-.verticalaccordion>ul>li:hover {
+.verticalAccordion>ul>li.active {
 	height: 170px;
 }
 
-.verticalaccordion:hover>ul>li:hover>h2 {
+.verticalAccordion:hover>ul>li.active>h3 {
     /* Decorative CSS */
     color:#fff;
     background: #000000;
@@ -150,9 +158,13 @@ body {background-color: #ededed; color: #92A8D1; width: 900px; margin: 0 auto; p
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff454545, endColorstr=#ff000000)";   /* IE 8 */
 }
 
-.verticalaccordion>ul>li>h2:hover {
+.verticalAccordion>ul>li>h3:hover {
     cursor:pointer;
 }
+
+
+
+
 
 
 
@@ -186,3 +198,7 @@ body {background-color: #ededed; color: #92A8D1; width: 900px; margin: 0 auto; p
 #theFooter li a:active {font-size: 11px; text-decoration: none; color: white;}
 
 #theFooter li a:visited {font-size: 11px; text-decoration: none; color: white;}
+
+#code ul {list-style-type: none;}
+
+#code ul {list-style-type: none;}

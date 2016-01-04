@@ -64,13 +64,7 @@ var VideoPlayer = React.createClass({
 				var dataObj = resp.toJSON();
 				console.log("success: ", resp);	
 				var	mapData = dataObj.map(function(obj){
-					return {
-						objectId: obj.objectId,
-						videolink: obj.videolink,
-						imageURL: obj.imageURL,
-						videoInfo: obj.videoInfo,
-						comments: obj.comments
-					}
+					return obj
 					console.log("here it is ", mapData); 
 				})
 				self.setState ({keyVideos: mapData})
@@ -100,7 +94,7 @@ var VideoPlayer = React.createClass({
 						</div>
 						
 							<div className="right-pane">
-								<ScrollBox comments={playingVideo.comments} currentTime={self.state.currentTime} />
+								<ScrollBox comments={playingVideo.comments} currentTime={self.state.currentTime} titleName={playingVideo.title}/>
 							</div>	
 							
 							<div className="left-panel">
@@ -255,13 +249,13 @@ var ScrollBox = React.createClass({
 					<li id={'comment-'+i} key={i} className={commentClass}><span>{comment.name}</span> ({this.formatTime(comment.time)}): <p>{comment.message}</p></li>
 				);
 
-		render: function printContent(el) {
-			var restorepage = document.body.innerHTML;
-			var printcontent = document.getElementbyId(el).innerHTML;
-			document.body.innerHTML = printcontent;
-			window.print();
-			document.body.innerHTML = restorepage;
-			}
+		// render: function printContent(el) {
+		// 	var restorepage = document.body.innerHTML;
+		// 	var printcontent = document.getElementbyId(el).innerHTML;
+		// 	document.body.innerHTML = printcontent;
+		// 	window.print();
+		// 	document.body.innerHTML = restorepage;
+		// 	}
 		})
 
 		return (
@@ -272,11 +266,21 @@ var ScrollBox = React.createClass({
 					</ul>
 				</div>
 				<div id="printButton">
-				<button onclick="printContent('#scrollingCommentsDiv')">Print Content</button>
+				<button onClick={this.printContent}>Print Content</button>
 				</div>
 			</div>
 		)
-	}
+	},
+	printContent: function () {
+		var newWindow = window.open();
+		newWindow.document.body.innerHTML = "<h1>" + this.props.titleName + "</h1>" + this.refs.list.innerHTML;
+		newWindow.print();
+		newWindow.close();
+
+	} 
+
+
+
 });
 	
 			

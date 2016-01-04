@@ -43,17 +43,7 @@ var MenuView = React.createClass({
 				var dataObj = resp.toJSON();
 					console.log("success: ", resp);	
 				var	mapData = dataObj.map(function(obj){
-					return {
-						objectId: obj.objectId,
-						videolink: obj.videolink,
-						imageURL: obj.imageURL,
-						videoInfo: obj.videoInfo,
-						comments: obj.comments,
-						title: obj.title,
-						timeLength: obj.timeLength,
-						dateLoaded: obj.dateLoaded,
-						category: obj.category
-					}
+					return obj;
 					console.log("here it is ", mapData);
 				})
 				self.setState ({keyVideos: mapData})
@@ -64,7 +54,8 @@ var MenuView = React.createClass({
 	},
 	render: function () {
 		var groups = underscore.groupBy (this.state.keyVideos,"category");
-			console.log(groups);
+		var alphaGroups = underscore.keys (groups).sort();
+			console.log(alphaGroups);
 			return (
 				<div>
 					<div id="menuViewDiv">
@@ -73,7 +64,9 @@ var MenuView = React.createClass({
 							<p>shinyVideo provides a Javascript library that allows you to comment on a video in play and play back the comments in sync to the video. Multiple users may comment and identify themselves with their names. To view a demo, click on any thumbnail image below to be taken to the video player page. Videos are arranged below by video category.</p>
 							</div>
 						{
-							underscore.map(groups, this.renderCategory)
+							underscore.map(alphaGroups, function(key) {
+								return this.renderCategory(groups[key], key);
+							},this)
 						}
 
 					</div>
