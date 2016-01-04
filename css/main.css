@@ -39,8 +39,7 @@ body {background-color: #ededed; color: #92A8D1; width: 900px; margin: 0 auto; p
 
 #navMenu li a:active {font-size: 16px; font-weight: bold; text-decoration: none; color: #ffffff;}
 
-
-
+#navMenu li a:visited {font-size: 16px; font-weight: bold; text-decoration: none; color: #334185;}
 
 
 /* 3. MENU VIEW PAGE */
