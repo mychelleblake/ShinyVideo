@@ -7,7 +7,7 @@ serenity blue 92A8D1, 89ABE3
 
 /* 1. MAIN SITE AND HOME PAGE VIEW */
 
-body {background-color: #ededed; color: #92A8D1; width: 900px; margin: 0 auto; padding: 0; font-family: "Helvetica", sans serif;}
+body {background-color: #ededed; color: #000000; width: 900px; margin: 0 auto; padding: 0; font-family: "Helvetica", sans serif;}
 
 #container {display: inline-block;}
 
