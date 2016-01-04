@@ -143,7 +143,7 @@ body {background-color: #ededed; color: #92A8D1; width: 900px; margin: 0 auto; p
 }
 
 .verticalAccordion>ul>li.active {
-	height: 150px;
+	height: 190px;
 	font-size: 14px;
 }
 
