@@ -12,7 +12,10 @@ var VideoLink = Backbone.Model.extend ({
 		imageURL: null,
 		videoInfo: null,
 		comments: null,
-		Title: null
+		Title: null,
+		timeLength: null,
+		category: null,
+		dateLoaded: null
 	},
 	_parse_class_name: "videolink",
 	idAttribute: "objectId"
@@ -93,6 +96,11 @@ var VideoPlayer = React.createClass({
 						<div id="playerVideo" className="left-pane">
 
 								<h3 id="videoTitle">Video Title: &nbsp; {playingVideo.title}</h3>
+									<div id="videoPageInfo">
+										<h4>Category: &nbsp; {playingVideo.category}</h4>
+										<p>{playingVideo.videoInfo}<br/>
+											Time: &nbsp; {playingVideo.timeLength}, &nbsp; Date Loaded: &nbsp; {playingVideo.dateLoaded}</p>
+									</div>
 							<PopcornPlayer src={playingVideo.videolink} handleTimeUpdate={self.handleTimeUpdate} />
 						</div>
 						

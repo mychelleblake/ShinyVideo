@@ -17,11 +17,18 @@
 /*#menuViewDiv {width: 1280px; height: 1400px; display: block; color: black; list-style-type: none; margin-top: 30px; background-color: #D3D3D3; background-repeat: repeat;}
 */
 
+#videoPageInfo {width: 450px; padding: 0; margin: 0;}
+
+#videoPageInfo h4 {width: 450px; padding: 0; margin: 0; font-family: "Francois-One", sans-serif; margin-bottom: 5px;}
+
+#videoPageInfo p {width: 450px; padding: 0; margin: 0; font-size: 12px;}
+
+
 
 
 /* SCROLLING COMMENTS STYLING */
 
-#scrollingCommentsDiv {width: 375px; height: 332px; overflow-x: hidden; overflow-y: scroll; margin-top: -25px; margin-left: 20px; float: left; background-color: white; display: inline-block; color: #000000; border: 3px double black; font-size: 11px;padding: 0;}
+#scrollingCommentsDiv {width: 375px; height: 297px; overflow-x: hidden; overflow-y: scroll; margin-top: -25px; margin-left: 20px; float: left; background-color: white; display: inline-block; color: #000000; border: 3px double black; font-size: 11px;padding: 0;}
 
 #scrollingCommentsDiv li {list-style-type: none; padding: 0; margin: 0; font-size: 12px;}
 
