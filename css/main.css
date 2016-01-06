@@ -1,9 +1,3 @@
-/* rose quartz F7CAC9, F2DDDE
-serenity blue 92A8D1, 89ABE3
-*/
-
-/*background-color: #10206B;*/
-/*background-image: url("/assets/black-dreams-in-blue-website-background.jpg"*/
 
 /* 1. MAIN SITE AND HOME PAGE VIEW */
 
@@ -89,138 +83,52 @@ h1, h2, h3, h4 {font-family: 'Francois One', sans-serif;}
 .docuInfo {width: 840px; padding-left: 20px;}
 
 
+
+
 /* 4A. LIBRARY PAGE ACCORDION MENU */
 
-.verticalAccordion {
-	font-size: 14px;
-	padding: 0;
-	margin: 0;
-}
+.verticalAccordion {font-size: 14px; padding: 0; margin: 0;}
 
-.verticalAccordion>ul {
-    margin: 0;
-    list-style:none;
-   	width: 880px;
-   	padding: 0;
-   	font-size: 14px;
-}
+.verticalAccordion>ul {margin: 0; list-style:none; width: 880px; padding: 0; font-size: 14px;}
 
-.libraryText {
-	font-size: 16px;
-}
+.libraryText {font-size: 16px;}
 
-.libraryText img {
-	width: 50px;
-	height: 50px;
-	text-align: right;
-	font-family: "Helvetica", sans-serif;
-}
+.libraryText img {width: 50px;height: 50px;text-align: right;font-family: "Helvetica", sans-serif;}
 
-.libraryText2 {
-	font-size: 16px;
-}
+.libraryText2 {font-size: 16px;}
 
-.libraryText2 img {
-	width: 850px;
-	height: 165px;
+.libraryText2 img {width: 850px;height: 165px;}
 
-}
+.libraryText3 img {width: 630px;height: 360px;margin-left:110px;}
 
-.libraryText3 img {
-	width: 630px;
-	height: 360px;
-	margin-left:110px;
-}
+#sourceCode {font-size: 14px;}
 
-#sourceCode {
-	font-size: 14px;
-}
+.rightImg {text-align: right;}
 
-.rightImg {
-	text-align: right;
-}
+.rightImg1 {text-align: right;}
 
-.rightImg1 {
-	text-align: right;
-}
+.rightImg1 img {width: 50px;height: 50px;text-align: right;}
 
-.rightImg1 img {
-	width: 50px;
-	height: 50px;
-	text-align: right;
-}
+.imageFtRgt {float: right;margin: 0; padding: 0;}
 
-.imageFtRgt {
-	float: right;
-	margin: 0;
-	padding: 0;
-}
+.docUL {margin-bottom: 0; padding-bottom: 0; height: 275px;}
 
-.docUL {
-	margin-bottom: 0;
-	padding-bottom: 0;
-    height: 275px;
-}
+.jsxTitle {font-weight: bold;}
 
-.jsxTitle {
-	font-weight: bold;
-}
-.verticalAccordion>ul>li {
-    display:block;
-	overflow: hidden;
-    margin: 0;
-    padding: 0;
-    list-style:none;
-	height:40px;
-	width: 880px;
-    background-color:#f0f0f0;
-    transition: height 1.2s ease;
-    -moz-transition: height 1.2s ease;
-    -webkit-transition: height 1.2s ease;
-    -o-transition: height 1.2s ease;
-}
+.verticalAccordion>ul>li {display:block; overflow: hidden; margin: 0; padding: 0; list-style:none; height:40px; width: 880px;background-color:#f0f0f0; transition: height 1.2s ease; -moz-transition: height 1.2s ease;
+    -webkit-transition: height 1.2s ease; -o-transition: height 1.2s ease;}
 
-.verticalAccordion>ul>li>h3 {
-    display:block;
-    margin: 0;
-    padding:10px;
-    height:19px;
-    border-top:#f0f0f0 1px solid;
-    font-family: 'Francois One', sans-serif;
-    text-decoration:none;
-    color: #000000;
-    background: #cccccc;
-    background: -moz-linear-gradient( top, #999999, #cccccc);
-    background: -webkit-gradient(linear, left top, left bottom, from(#999999), to(#cccccc));
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff999999, endColorstr=#ffcccccc); 
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff999999, endColorstr=#ffcccccc)"; 
-}
+.verticalAccordion>ul>li>h3 {display:block; margin: 0; padding:10px; height:19px; border-top:#f0f0f0 1px solid; font-family: 'Francois One', sans-serif; text-decoration:none; color: #000000; background: #cccccc; background: -moz-linear-gradient( top, #999999, #cccccc); background: -webkit-gradient(linear, left top, left bottom, from(#999999), to(#cccccc)); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff999999, endColorstr=#ffcccccc); -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff999999, endColorstr=#ffcccccc)"; }
 
-.verticalAccordion>ul>li>div {
-    margin:0;
-    overflow: auto;
-    padding:10px;
-    height:1000px;
-}
+.verticalAccordion>ul>li>div {margin:0; overflow: auto; padding:10px;height:1000px;}
 
-.verticalAccordion>ul>li.active {
-	height: 415px;
-	font-size: 14px;
-}
+.verticalAccordion>ul>li.active {height: 415px;font-size: 14px;}
 
-.verticalAccordion:hover>ul>li.active>h3 {
-    color:#fff; background: #000000;
-    background: -moz-linear-gradient( top, #454545, #000000);
-    background: -webkit-gradient(linear, left top, left bottom, from(#454545), to(#000000)); 
+.verticalAccordion:hover>ul>li.active>h3 {color:#fff; background: #000000; background: -moz-linear-gradient( top, #454545, #000000); background: -webkit-gradient(linear, left top, left bottom, from(#454545), to(#000000)); 
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff454545, endColorstr=#ff000000); 
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff454545, endColorstr=#ff000000)";  
-}
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff454545, endColorstr=#ff000000)";}
 
-.verticalAccordion>ul>li>h3:hover {
-    cursor:pointer;
-}
-
-
+.verticalAccordion>ul>li>h3:hover {cursor:pointer;}
 
 
 
