@@ -94,7 +94,6 @@ var VideoPlayer = React.createClass({
 				<div id="videoPage">
 					<div id="videoPlayer">
 						<div id="playerVideo" className="left-pane">
-
 								<h3 id="videoTitle">Video Title: &nbsp; {playingVideo.title}</h3>
 									<div id="videoPageInfo">
 										<h4>Category: &nbsp; {playingVideo.category}</h4>
@@ -260,13 +259,6 @@ var ScrollBox = React.createClass({
 					<li id={'comment-'+i} key={i} className={commentClass}><span>{comment.name}</span> ({this.formatTime(comment.time)}): <p>{comment.message}</p></li>
 				);
 
-		// render: function printContent(el) {
-		// 	var restorepage = document.body.innerHTML;
-		// 	var printcontent = document.getElementbyId(el).innerHTML;
-		// 	document.body.innerHTML = printcontent;
-		// 	window.print();
-		// 	document.body.innerHTML = restorepage;
-		// 	}
 		})
 
 		return (
