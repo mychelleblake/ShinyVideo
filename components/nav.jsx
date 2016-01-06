@@ -11,7 +11,7 @@ var Nav = React.createClass({
 			<div>
 			<div id="navMenu">
 				<div id="headerShiny">
-					<img src="/assets/film.png"/><h1>shinyVideo js</h1>
+					<img src="/assets/film.png"/><h1>shinyVideo.js</h1>
 				</div>
 					<ul>
 						<li><Link to="/">Home</Link></li>
@@ -21,7 +21,7 @@ var Nav = React.createClass({
 					
 			</div>
 			<div id="tagLine">
-						<p>A Javascript library solution for real-time interaction with online video</p>
+						<p>A Javascript library solution for real-time interaction with online videos</p>
 					</div>
 			</div>
 		);
