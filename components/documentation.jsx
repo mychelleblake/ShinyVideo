@@ -53,9 +53,9 @@ var Documentation = React.createClass({
 							<li className={this.state.activePane === 4 ? "active": ""}>
 						        <h3 onClick={()=>this.setState({activePane:4})}>Where can I see examples?</h3>
 								<div className="libraryText">
-									<p>Visit the Video Menu page on the shinyVideo.js site. A wide variety of videos are provided for examples. Videos with “EXAMPLE” in the description already have comments added. If you click on a thumbnail, you will be taken to the Video Player page.  For EXAMPLE videos, press play on the video player and you will see the comments scroll along the box on the right. For other videos, you can try out the process by typing comments in the Name and Comments boxes underneath the video player (and don’t forget to hit submit!) Press play on the video to replay and you will see the comments scroll in the box on the right (please note, you might need to refresh the screen and/or wait for a few seconds of delay as the data comes back to the site from Parse.)</p>
+									<p>Visit the Video Menu page on the shinyVideo.js site. A wide variety of videos are provided for examples. Videos with “EXAMPLE” in the description already have comments added. If you click on a thumbnail, you will be taken to the Video Player page. </p><p> For EXAMPLE videos, press play on the video player and you will see the comments scroll along the box on the right. For other videos, you can try out the process by typing comments in the Name and Comments boxes underneath the video player (and don’t forget to hit submit!) Press play on the video to replay and you will see the comments scroll in the box on the right (please note, you might need to refresh the screen and/or wait for a few seconds of delay as the data comes back to the site from Parse.)</p>
 
-										<p>If you wish to save or print the transcript, press the Print button underneath the scrolling comment box which will take you to a print window.  </p><br/><br/><br/><br/><p className="rightImg"><img src="/assets/film.png"/></p></div>
+										<p>If you wish to save or print the transcript, press the Print button underneath the scrolling comment box which will take you to a print window.  </p><br/><br/><p className="rightImg"><img src="/assets/film.png"/></p></div>
 							</li>
 
 							<li className={this.state.activePane === 5 ? "active": ""}>
