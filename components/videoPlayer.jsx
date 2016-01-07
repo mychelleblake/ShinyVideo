@@ -3,7 +3,7 @@ var ReactDOM = require("react-dom");
 var router = require("../js/routes.jsx");
 var $ = require('jquery');
 
-var VideoLink = Backbone.Model.extend ({
+var VideoLink = Backbone.Model.extend ({  //VideoLink is the Parse "class" name for the database
 	initialize: function () {		
 	},
 	defaults: {
@@ -29,7 +29,7 @@ var Videos = Backbone.Collection.extend ({
 var VideosCollection = new Videos ();
 
 
-var PopcornPlayer = React.createClass({
+var PopcornPlayer = React.createClass({  //setting up the videoplayer with popcorn js (see popcorn api for control commands)
 	componentDidMount: function() {
 		var pop = Popcorn("#theVideoPlayer");
 		
@@ -43,7 +43,7 @@ var PopcornPlayer = React.createClass({
     		}
 		})
 	},
-	render: function() {
+	render: function() {   //this returns the div with the videoplayer
 		return (
 			<div>
 			<video id="theVideoPlayer">
@@ -61,7 +61,7 @@ var VideoPlayer = React.createClass({
 			currentTime: 0
 		}
 	},
-	componentDidMount: function() {
+	componentDidMount: function() {  //this sets up the data map for the info from parse and sets it up for the videoplayer
 		var self = this;
 		VideosCollection.fetch({
 			success: function(resp) {
@@ -78,19 +78,19 @@ var VideoPlayer = React.createClass({
 		});
 	},
 	handleTimeUpdate: function(pop) {
-		this.setState({ currentTime: pop.currentTime() });
+		this.setState({ currentTime: pop.currentTime() });   //gets the current time
 	},
 	render: function () {
 		if (this.state.keyVideos.length==0)
 		{
-			return <div id="blankVideo"></div>
+			return <div id="blankVideo"></div>  //leaves video player blank if nothing is playing
 		}
 		else {
 			var self = this;
 			var playingVideo = _.find(this.state.keyVideos, function(video) {
 				return video.objectId == self.props.params.objectId
 			})
-			return (
+			return (  //this sets up the videoplayer with the actual video as well as the title and description info at the top, and gets the time code
 				<div id="videoPage">
 					<div id="videoPlayer">
 						<div id="playerVideo" className="left-pane">
@@ -103,7 +103,7 @@ var VideoPlayer = React.createClass({
 							<PopcornPlayer src={playingVideo.videolink} handleTimeUpdate={self.handleTimeUpdate} />
 						</div>
 						
-							<div className="right-pane">
+							<div className="right-pane"> 
 								<ScrollBox comments={playingVideo.comments} currentTime={self.state.currentTime} titleName={playingVideo.title}/>
 							</div>	
 							
@@ -121,7 +121,7 @@ var VideoPlayer = React.createClass({
 var AddBox = React.createClass({
 getInitialState: function() {
 
-	return {
+	return {  //sets up data for comments box with blank array
 		name: "",
 		comments: ""
 	}
@@ -133,7 +133,7 @@ handleCommentsChange: function(e) {
 handleNameChange: function(e) {
 	this.setState({name: e.target.value});
 },
-handleFormSubmit: function(e) {
+handleFormSubmit: function(e) {   //takes in comments and time
 	e.preventDefault();
 	var newComments;
 	var comment = {
@@ -142,7 +142,7 @@ handleFormSubmit: function(e) {
 		name: this.state.name
 	};
 
-	var video = new VideoLink(this.props.playingVideo);
+	var video = new VideoLink(this.props.playingVideo);   
 	if(!video.get('comments')){
 		video.set('comments', [comment]);
 	} else {
@@ -158,7 +158,7 @@ handleFormSubmit: function(e) {
 	})
 },
 
-render: function(){
+render: function(){   //creates inputs for comments
 	return (
 		<div id="addDiv">
 			<div id="addCommentsDiv">
@@ -176,7 +176,7 @@ render: function(){
 
 
 
-var ScrollBox = React.createClass({
+var ScrollBox = React.createClass({  //creates scrolling box and sort for videos by time
 	getInitialState: function() {
 		return {
 			lastCommentIndex: -1,
@@ -205,7 +205,7 @@ var ScrollBox = React.createClass({
 			this.setState({lastCommentIndex: newIndex, didChangeIndex: false});
 		}
 	},
-	componentDidUpdate: function(){
+	componentDidUpdate: function(){ 
 		if(this.state.didChangeIndex){
 			var scrollTo = $("#comment-" + this.state.lastCommentIndex).offset().top - $("#scrollingCommentsDiv").offset().top - 15;
 			console.log('scrolling to', scrollTo);
@@ -214,7 +214,7 @@ var ScrollBox = React.createClass({
 			});
 		}
 	},
-	formatTime: function(theTime) {
+	formatTime: function(theTime) {   //rounds time up to minutes
 		var minutes = Math.floor(theTime/60);
 		var seconds = (theTime%60);
 			if (seconds < 10) {
@@ -224,7 +224,7 @@ var ScrollBox = React.createClass({
 	},
 
 	render: function() {
-		var comments = !this.props.comments ? [] : this.props.comments
+		var comments = !this.props.comments ? [] : this.props.comments   //sets up the sort for comment order
 			.sort(function (a, b) {
 				if (a.time < b.time) {
 					return -1;   //one on the left comes first
@@ -256,12 +256,12 @@ var ScrollBox = React.createClass({
 				}
 
 				return (
-					<li id={'comment-'+i} key={i} className={commentClass}><span>{comment.name}</span> ({this.formatTime(comment.time)}): <p>{comment.message}</p></li>
+					<li id={'comment-'+i} key={i} className={commentClass}><p><span>{comment.name}</span> ({this.formatTime(comment.time)}):&nbsp; {comment.message}</p></li>
 				);
 
 		})
 
-		return (
+		return (   //sets up the print button
 			<div id="scrollDiv">
 				<div id="scrollingCommentsDiv">
 					<ul ref="list">
@@ -274,7 +274,7 @@ var ScrollBox = React.createClass({
 			</div>
 		)
 	},
-	printContent: function () {
+	printContent: function () {    //sets up print function 
 		var newWindow = window.open();
 		newWindow.document.body.innerHTML = "<h1>" + this.props.titleName + "</h1>" + this.refs.list.innerHTML;
 		newWindow.print();

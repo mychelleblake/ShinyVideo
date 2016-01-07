@@ -6,7 +6,7 @@ var underscore = require("underscore");
 var Link = ReactRouter.Link;
 
 
-var VideoLink = Backbone.Model.extend ({
+var VideoLink = Backbone.Model.extend ({ //VideoLink is the Parse "class" name for the database
 	initialize: function () {		
 	},
 	defaults: {
@@ -25,12 +25,12 @@ var Videos = Backbone.Collection.extend ({
 	_parse_class_name: "videolink",
 })
 
-var VideosCollection = new Videos ();
+var VideosCollection = new Videos (); //this code above sets up the data collection model (Backbone)
 
 
 
 
-var MenuView = React.createClass({
+var MenuView = React.createClass({   //setting up the data fetch from Parse for the video menu page
 	getInitialState: function() {
 		return {
 			keyVideos: [],
@@ -42,7 +42,7 @@ var MenuView = React.createClass({
 			success: function(resp) {
 				var dataObj = resp.toJSON();
 					console.log("success: ", resp);	
-				var	mapData = dataObj.map(function(obj){
+				var	mapData = dataObj.map(function(obj){   //need to map through the data
 					return obj;
 					console.log("here it is ", mapData);
 				})
@@ -53,8 +53,8 @@ var MenuView = React.createClass({
 		});
 	},
 	render: function () {
-		var groups = underscore.groupBy (this.state.keyVideos,"category");
-		var alphaGroups = underscore.keys (groups).sort();
+		var groups = underscore.groupBy (this.state.keyVideos,"category"); //we're sorting by category 
+		var alphaGroups = underscore.keys (groups).sort();  //and then categories alphabetically
 			console.log(alphaGroups);
 			return (
 				<div>
@@ -73,7 +73,7 @@ var MenuView = React.createClass({
 				</div>
 			)
 	},
-		renderCategory: function (catVideos, category) {
+		renderCategory: function (catVideos, category) {  //once sort is set up, now we are creating the actual "view" of the videos and info going down the page
 		return (
 			<div>
 			<h4 id="catHeading">{category}</h4>
@@ -84,7 +84,7 @@ var MenuView = React.createClass({
 			</ul>
 			</div>)
 	},
-	renderThumb: function (menuData) {
+	renderThumb: function (menuData) {  //this sets up the link from the thumbnails to the videoplayer component
 		return (
 		<li><div id="thumbOne">
 				<Link to={"/VideoPlayer/" + menuData.objectId}><img src={menuData.imageURL}/>

@@ -23,7 +23,7 @@
 
 /* SCROLLING COMMENTS STYLING */
 
-#scrollingCommentsDiv {width: 375px; height: 297px; overflow-x: hidden; overflow-y: scroll; margin-top: -25px; margin-left: 20px; float: left; background-color: white; display: inline-block; color: #000000; border: 3px double black; font-size: 11px;padding: 0;}
+#scrollingCommentsDiv {width: 375px; height: 400px; overflow-x: hidden; overflow-y: scroll; margin-top: -25px; margin-left: 20px; float: left; background-color: white; display: inline-block; color: #000000; border: 3px double black; font-size: 11px;padding: 0;}
 
 #scrollingCommentsDiv li {list-style-type: none; padding: 0; margin: 0; font-size: 12px;}
 
@@ -31,9 +31,9 @@
 
 .current-comment {background: #ededed; padding: 0;}
 
-.current-comment span {background: #ededed; font-weight: bold; color: #334185; font-size: 14px; padding: 0;}
+.current-comment span {background: #ededed; font-weight: bold; color: #334185; font-size: 13px; padding: 0;}
 
-.current-comment p {background: #ededed; font-weight: bold; color: #334185; font-size: 14px; padding: 0;}
+.current-comment p {background: #ededed; font-weight: bold; color: #334185; font-size: 13px; padding: 0;}
 
 #scrollDiv {width: 375px; height: 315px; float: left; display: inline-block; padding: 0;}
 
@@ -52,7 +52,7 @@
 
 #addCommentsForm {float: left; }
 
-#addDiv {width: 860px; height: 80px; margin-left: 12px;margin-top: 20px;}
+#addDiv {width: 860px; height: 80px; margin-left: 12px;margin-top: 100px;}
 
 .left-pane, .right-pane{
 	display: inline-block;
